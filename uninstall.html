@@ -22,12 +22,44 @@
             font-family: "Roboto", "Segoe UI", "Helvetica Neue", Ubuntu, Arial;
             user-select: none;
         }
+
+/*         #form{
+            height: 90vh; 
+            width:700px;
+        } */
+
+        .intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 56.25%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%;
+}
+ 
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
     </style>
 
 </head>
 
 <body>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdg7fWoB51GZw8zzOZsFNUliJsPa9cxk8j89P1Id3OzyJ4H7w/viewform?embedded=true" width="700" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        <div class="intrinsic-container intrinsic-container-16x9">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAgU5VhkhIWA9ZfXFuKvbH7pz7AQ-n1jatpVXToTdCfLzdwg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+              </div>
     
 </body>
 
