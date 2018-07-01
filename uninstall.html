@@ -3,45 +3,20 @@
 <head>
     <meta charset="utf-8">
     <title>Simple mass downloader options</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <style>
-        body {
-            background-color: whitesmoke;
-            /* display: flex; */
-        }
-        .hidden {
-            display: none;
-        }
-
-        #content {
-            max-width: 50rem;
-            background-color: white;
-            margin: 0 auto auto auto;
-            padding: 5px;
-            border: 1px solid #808080;
-            font-family: "Roboto", "Segoe UI", "Helvetica Neue", Ubuntu, Arial;
-            user-select: none;
-        }
-
-/*         #form{
-            height: 90vh; 
-            width:700px;
-        } */
-
+body{
+    display:flex;
+    flex-direction:column
+}
         .intrinsic-container {
   position: relative;
   height: 0;
   overflow: hidden;
 }
- 
-/* 16x9 Aspect Ratio */
+
 .intrinsic-container-16x9 {
-  padding-bottom: 56.25%;
-}
- 
-/* 4x3 Aspect Ratio */
-.intrinsic-container-4x3 {
-  padding-bottom: 75%;
+  height:100%;
+  width:100%;
 }
  
 .intrinsic-container iframe {
