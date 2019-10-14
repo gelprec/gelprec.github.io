@@ -1,0 +1,287 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SMD FAQ</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <style>
+        html {
+            background-color: whitesmoke;
+        }
+
+        #warnings {
+            margin-bottom: 2rem;
+            padding-top: 0;
+        }
+
+        #help {
+            padding-top: 1px;
+        }
+
+        #chrome-settings {
+            cursor: pointer;
+            color: #3F51B5;
+            font-weight: 500;
+        }
+
+        .content {
+            /* border: 1px solid lightgrey; */
+            background-color: white;
+            color: #37474F;
+            padding: 1rem;
+            max-width: 60rem;
+            align-content: center;
+
+            text-justify: inherit;
+            text-align: justify;
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+            margin-bottom: 1rem;
+        }
+
+        .markdown-body {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            line-height: 1.5;
+            color: #24292e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 0.925rem;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .markdown-body strong {
+            font-weight: 600;
+        }
+
+        .markdown-body code {
+            padding: 0.2em 0.4em;
+            margin: 0;
+            /* font-size: 85%; */
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.25em;
+        }
+
+        .markdown-body h4 {
+            font-size: 1em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .intro {
+            color: black;
+            font-weight: bold;
+        }
+
+        #template-1 {
+            max-width: 30rem;
+            padding: 0.25rem;
+        }
+
+        #attributes-info {
+            color: #3F51B5;
+            cursor: pointer;
+        }
+
+        .popup {
+
+            pointer-events: "visible";
+            font-size: 0.9rem;
+            overflow: hidden;
+        }
+
+        .popup.light-theme {
+            color: #203d5d;
+            box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+            background-color: whitesmoke;
+            border: 1px solid gray;
+            border-radius: unset;
+            padding: 0;
+            /*     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); */
+        }
+
+        .bordered {
+            border: 2px solid #B71C1C;
+            padding: 0.25rem;
+        }
+
+        .container {
+            height: 100%;
+            width: calc(min(800px, 100%));
+            max-width: 60rem;
+            /* width: calc(100% - 80px); */
+            text-align: justify;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        p.q {
+            color: #3F51B5;
+            font-weight: 500;
+        }
+
+        p.q strong {
+            color: #263238;
+        }
+
+        .img-container{
+            margin:0.5rem 0; 
+            text-align:center;
+        }
+
+        ol {
+  margin: 0 0 1.5em;
+  padding: 0;
+  counter-reset: item;
+}
+
+ol > li {
+  margin: 0;
+  padding: 0 0 0 2em;
+  text-indent: -2em;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+ol > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}
+
+img{
+    vertical-align: middle;
+}
+    </style>
+
+</head>
+
+<body class="markdown-body">
+    <div class="container">
+        <div class="content">
+            <li class="chrome bordered" style="list-style: none;">
+                <div class="inner-li" style='padding: 0 0.5rem;'>
+                    <b>First of all, please verify</b> in your <a id="smd-gelprec-chrome-settings" style="cursor:pointer;text-decoration: underline;color: #2196F3;
+    font-weight: bold;">Chrome
+                        Download Settings</a> that the following option: <strong>Ask where to save each file before
+                        downloading</strong>
+                    <b style="color: #B71C1C;">is NOT checked!</b>
+                    <br>
+                    Otherwise, for <b>every item</b> in the download queue you will be prompted to choose a name via a
+                    <b>Save As</b> dialog (try to figure out what that means for a list of, say, 500 downloads or more)!
+            </li>
+        </div>
+
+        <div class="content">
+            <h2>Basic usage</h2>
+            <p>
+                The user go to some web page, right click and from the contextual menu choose the <img src="images/image-20.png"></img>. This will show a <strong>quick download dialog</strong>:
+                <div class = "img-container"><img src="images/image-21.png"></img></div>
+                The user checks de desired file types (in our case pdfs) and optionally choose a download directory (defined as a subfolder of the Chrome main Downloads directory) and finally clicks the <strong>Download now</strong> button.
+                    <p>
+                        The files start to download and if all goes well the user will found them in the <code>Downloads/Algebra</code> subfolder. 
+                    </p> 
+                    <p><b>Tip:</b> If the user make a <strong>text selection on the web page</strong>, the addon will try to include only the links from that selection (the context menu will also include the option <img src="images/image-20b.png"></img>)</p>
+                    <p>This workflow <strong>lacks advanced filtering/renaming options</strong> but may be appropriate in many situations.</p>
+                
+
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>A more typical workflow</h2>
+            <p>The general idea of the addon is to collect links to the resources list (with optional filtering) and
+                finally to add checked items to the download queue.</p>
+            <ol>
+                <li>
+                    Go to some web page (with many resources, for example pdfs, epubs etc), activate the extension popup and click there the <strong>Load page
+                        links</strong> button:
+                    <div class = "img-container"><img src="images/image-1.png"></img></div>
+                    This usually fills the resources list with all sort of links, not only the desired pdfs. 
+                    <div class = "img-container"><img src="images/image-4.png"></img></div>
+                    Note that the addon  display files, by default, using the (estimated) file names. But sometimes is better to display links using the text attribute (what the user usually see on web pages). So for a better orientation, you can choose the text as displayed attribute and now you see something as 
+                    
+                    <div class = "img-container"><img src="images/image-6.png"></img> &nbsp; &nbsp;&nbsp; &nbsp;<img src="images/image-5.png"></img></div>
+                </li>
+                <li> Now, the next step is to filter this list, such that only desirable links stays here.<br>
+                    The most obvious type of filtering is by extension. You can start filtering process by writing <code>pdf</code> in the dedicated extensions field (or <code> pdf epub doc</code> if you seek more types). 
+                    If necessary, you can refine filtering using the textfilter field
+                    <div class = "img-container"><img src="images/image-7.png"></img></div>
+                    Note that the textfilter uses by default the attribute currently used for displaying items (by default <code>FILENAME</code>, but in our case <code>TEXT</code>). 
+                    A more advanced usage may involve more attributes, for example, <code>text:group url:algebra</code> (this shows only items with <code>group</code> term inside text attribute <b>and</b> 
+                    <code>algebra</code> term inside their url). 
+                    Click the corresponding help button <img src="images/image-8.png"></img> for more details regarding filtering possibilities (this help button is visible only the textfilter field is focused). 
+                </li>
+                <li>
+                    Now you have isolated all desired pdf. Next check all items <strong>at once</strong> (using the top main check) or only <strong>a range</strong> (using <code>shift + click</code>) and finally click the <strong>download now </strong> button from bottom-right corner
+                    <div class = "img-container"><img src="images/image-10.png"></img></div>
+                    <div class = "img-container"><img src="images/image-9.png"></img></div>
+                </li>
+                <li>
+                    The items start downloading. A finished item looks like:
+                    <div class = "img-container"><img src="images/image-11.png"></img></div>
+                    You can directly open the file clicking its name or open the directory where the file was downloaded using the corresponding folder icon.
+                </li>
+            </ol>
+        </div>
+
+        <div class="content">
+            <h2>Setting a custom download directory</h2>
+            <p>
+                By default, all downloaded files go to the Chrome global download directory <img src="images/image-12.png"></img> (usally named <strong>Downloads</strong>)
+                <div>
+                    My addon cannot change by itself this main download directory (a known webextensions system limitation) but what it's possible and really useful is to set <strong>subfolders</strong> inside it.
+                    <div class = "img-container"><img src="images/image-13.png"></img></div>
+                </div>
+                So you write <code>algebra/groups</code> in the dedicated directory field. Now all downloaded files go specifically to the <code>Downloads/Algebra/Groups </code> subfolder.
+                <p>
+                    <b>Some tips:</b>
+                    <ul>
+                        <li>You can first define a set of <strong>favorite folders</strong>. For this, go to the addon settings <img src="images/image-15.png"></img>,<br> on <strong>Download directories</strong> section:
+                            <div class = "img-container"><img src="images/image-14.png"></img></div>
+                        </li>
+                        <li>You can use some <strong>name masks</strong> on directory names. For example <code>Algebra {yyyy}/Groups</code> will generate the subfolders path <code>Downloads/Algebra 2019/Groups </code>. Click the 
+                        corresponding help button <img src="images/image-8.png"></img> for more details.
+                    </li>
+                    </ul>
+                </p>
+
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Batch renaming</h2>
+
+            <p>
+                In many cases, the user can accept the default filenames, leaving unchanged the  <img src="images/image-16.png"></img> as displayed 
+                name for the resources list and clicking <img src="images/image-17a.png"></img> for <strong>immediate downloading</strong> (after checking desired items).<br>
+                But, sometimes, it's better to do some <strong>batch renaming</strong> before downloading and in this case the user <strong>will click on the other button </strong> 
+                <img src="images/image-17b.png"></img>. This <strong>will simply add</strong> the checked items to the (passive) download list:
+                <div class = "img-container"><img src="images/image-18.png"></img></div>
+                with the default file names (supposing that de displayed name attributes for resorce list was <code>FILENAME</code>).<br>
+
+                Now, the user can try to rename these files, using the <strong>name masks</strong> from the <strong> multirename dialog</strong>:
+                <div class = "img-container"><img src="images/image-19.png"></img></div>
+
+                The name masks system is very powerfull. Click the corresponding <img src="images/image-8.png"></img> for more details (this help button is visible only when the name masks field is focused).
+            </p>
+            <p></p>
+
+            </p>
+        </div>
+
+
+
+
+</body>
+
+</html>
