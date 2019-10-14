@@ -7,6 +7,7 @@
     <style>
         html {
             background-color: whitesmoke;
+            font-family:Roboto;
         }
 
         #warnings {
@@ -29,13 +30,17 @@
             background-color: white;
             color: #37474F;
             padding: 1rem;
-            max-width: 60rem;
+            max-width: 62rem;
             align-content: center;
 
             text-justify: inherit;
             text-align: justify;
             box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
             margin-bottom: 1rem;
+        }
+
+        p, div{
+            font-family:Roboto
         }
 
         .markdown-body {
@@ -50,7 +55,7 @@
         }
 
         .markdown-body strong {
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .markdown-body code {
@@ -112,8 +117,8 @@
 
         .container {
             height: 100%;
-            width: calc(min(800px, 100%));
-            max-width: 60rem;
+            width: calc(min(48rem, 100%));
+            max-width: 62rem;
             /* width: calc(100% - 80px); */
             text-align: justify;
             position: relative;
@@ -158,6 +163,11 @@ ol > li:before {
   content: counter(item) ".";
 }
 
+.link{
+    cursor:pointer;text-decoration: none;color: #3F51B5;
+    font-weight: 500;
+}
+
 img{
     vertical-align: middle;
 }
@@ -170,35 +180,45 @@ img{
         <div class="content">
             <li class="chrome bordered" style="list-style: none;">
                 <div class="inner-li" style='padding: 0 0.5rem;'>
-                    <b>First of all, please verify</b> in your <a id="smd-gelprec-chrome-settings" style="cursor:pointer;text-decoration: underline;color: #2196F3;
-    font-weight: bold;">Chrome
+                    <strong>First of all, please verify</strong> in your <a id="smd-gelprec-chrome-settings" class="link">Chrome
                         Download Settings</a> that the following option: <strong>Ask where to save each file before
                         downloading</strong>
-                    <b style="color: #B71C1C;">is NOT checked!</b>
+                    <strong style="color: #B71C1C;">is NOT checked!</strong>
                     <br>
-                    Otherwise, for <b>every item</b> in the download queue you will be prompted to choose a name via a
-                    <b>Save As</b> dialog (try to figure out what that means for a list of, say, 500 downloads or more)!
+                    Otherwise, for <strong>every item</strong> in the download queue you will be prompted to choose a name via a
+                    <strong>Save As</strong> dialog (try to figure out what that means for a list of, say, 500 downloads or more)!
             </li>
         </div>
 
         <div class="content">
+            <ul style="list-style: none;">
+                <li><a href="#basic-usage" class = "link">Basic usage</a></li>
+                <li><a href="#main-workflow" class = "link">A more flexible workflow</a></li>
+                <li><a href="#setting-directory" class = "link">Setting a custom download directory</a></li>
+                <li><a href="#multirename" class = "link">Batch renaming</a></li>
+                <li><a href="#tips" class = "link">Some random tips</a></li>
+            </ul>
+        </div>
+
+        <div class="content" id="basic-usage">
             <h2>Basic usage</h2>
             <p>
                 The user go to some web page, right click and from the contextual menu choose the <img src="images/image-20.png"></img>. This will show a <strong>quick download dialog</strong>:
                 <div class = "img-container"><img src="images/image-21.png"></img></div>
                 The user checks de desired file types (in our case pdfs) and optionally choose a download directory (defined as a subfolder of the Chrome main Downloads directory) and finally clicks the <strong>Download now</strong> button.
                     <p>
-                        The files start to download and if all goes well the user will found them in the <code>Downloads/Algebra</code> subfolder. 
+                        The files start to download and, if all goes well, the user will found them in the <code>Downloads/Algebra</code> subfolder. <br><strong style="color:#3F51B5">That's all!</strong>
                     </p> 
-                    <p><b>Tip:</b> If the user make a <strong>text selection on the web page</strong>, the addon will try to include only the links from that selection (the context menu will also include the option <img src="images/image-20b.png"></img>)</p>
+                    <hr>
+                    <p><strong>Tip:</strong> If the user make a <strong>text selection on the web page</strong>, the addon will try to include only the links from that selection (the context menu will also include the option <img src="images/image-20b.png"></img>)</p>
                     <p>This workflow <strong>lacks advanced filtering/renaming options</strong> but may be appropriate in many situations.</p>
                 
 
             </p>
         </div>
 
-        <div class="content">
-            <h2>A more typical workflow</h2>
+        <div class="content" id = "main-workflow">
+            <h2>A more flexible workflow</h2>
             <p>The general idea of the addon is to collect links to the resources list (with optional filtering) and
                 finally to add checked items to the download queue.</p>
             <ol>
@@ -208,18 +228,19 @@ img{
                     <div class = "img-container"><img src="images/image-1.png"></img></div>
                     This usually fills the resources list with all sort of links, not only the desired pdfs. 
                     <div class = "img-container"><img src="images/image-4.png"></img></div>
-                    Note that the addon  display files, by default, using the (estimated) file names. But sometimes is better to display links using the text attribute (what the user usually see on web pages). So for a better orientation, you can choose the text as displayed attribute and now you see something as 
+                    Note that the addon  display files, by default, using the (estimated) file names. But sometimes it is better to display links using the text attribute 
+                    (what the user usually see on web pages). So, for a better orientation, you can choose the text as displayed attribute and now you see something as 
                     
                     <div class = "img-container"><img src="images/image-6.png"></img> &nbsp; &nbsp;&nbsp; &nbsp;<img src="images/image-5.png"></img></div>
                 </li>
-                <li> Now, the next step is to filter this list, such that only desirable links stays here.<br>
+                <li> Now, the next step is to filter this list, such that only desirable links stay here.<br>
                     The most obvious type of filtering is by extension. You can start filtering process by writing <code>pdf</code> in the dedicated extensions field (or <code> pdf epub doc</code> if you seek more types). 
                     If necessary, you can refine filtering using the textfilter field
                     <div class = "img-container"><img src="images/image-7.png"></img></div>
                     Note that the textfilter uses by default the attribute currently used for displaying items (by default <code>FILENAME</code>, but in our case <code>TEXT</code>). 
-                    A more advanced usage may involve more attributes, for example, <code>text:group url:algebra</code> (this shows only items with <code>group</code> term inside text attribute <b>and</b> 
+                    A more advanced usage may involve more attributes, for example, <code>text:group url:algebra</code> (this shows only items with <code>group</code> term inside text attribute <strong>and</strong> 
                     <code>algebra</code> term inside their url). 
-                    Click the corresponding help button <img src="images/image-8.png"></img> for more details regarding filtering possibilities (this help button is visible only the textfilter field is focused). 
+                    Click the corresponding help button <img src="images/image-8.png"></img> for more filtering details (this help button is visible only the textfilter field is focused). 
                 </li>
                 <li>
                     Now you have isolated all desired pdf. Next check all items <strong>at once</strong> (using the top main check) or only <strong>a range</strong> (using <code>shift + click</code>) and finally click the <strong>download now </strong> button from bottom-right corner
@@ -234,7 +255,7 @@ img{
             </ol>
         </div>
 
-        <div class="content">
+        <div class="content" id="setting-directory">
             <h2>Setting a custom download directory</h2>
             <p>
                 By default, all downloaded files go to the Chrome global download directory <img src="images/image-12.png"></img> (usally named <strong>Downloads</strong>)
@@ -244,7 +265,7 @@ img{
                 </div>
                 So you write <code>algebra/groups</code> in the dedicated directory field. Now all downloaded files go specifically to the <code>Downloads/Algebra/Groups </code> subfolder.
                 <p>
-                    <b>Some tips:</b>
+                    <strong>Some tips:</strong>
                     <ul>
                         <li>You can first define a set of <strong>favorite folders</strong>. For this, go to the addon settings <img src="images/image-15.png"></img>,<br> on <strong>Download directories</strong> section:
                             <div class = "img-container"><img src="images/image-14.png"></img></div>
@@ -258,7 +279,7 @@ img{
             </p>
         </div>
 
-        <div class="content">
+        <div class="content" id="multirename">
             <h2>Batch renaming</h2>
 
             <p>
@@ -275,6 +296,32 @@ img{
                 The name masks system is very powerfull. Click the corresponding <img src="images/image-8.png"></img> for more details (this help button is visible only when the name masks field is focused).
             </p>
             <p></p>
+
+            </p>
+        </div>
+
+        <div class="content" id="tips">
+            <h2>Some random tips</h2>
+
+            <p>
+                <ul>
+                    <li>
+                        Those items from the resource list that are also on the download list use a distinctive color for their checkboxes (<img src="images/image-22a.png"></img> or <img src="images/image-22b.png"></img>)
+                        and cannot be sended again on download list (unless they are first removed from the download list). So, in general, you should not worry for sending the same file multiple times on the download list.
+                    </li>
+                    <li> The extension remember if an item was downloaded in the current session or recent history and make them visible on the resource list using a green color text
+                        <div class = "img-container"><img src="images/image-23.png"></img></div>
+                    </li>
+                    
+                    <li> 
+                        Note that the user may get all attributes/information available for an individual item from the resource list by right-clicking it. 
+                        This will open an informative popup with all attributes available for that item ( <code>url/title/text</code> etc.), including a thumbnail view for image type items
+                        (see the image above for an example).
+                    </li>
+                    <li>
+                        On the download list the user can move up/down a group of selected items by using <code>ctrl + up/down arrow keys</code>. This can be useful when using contor masks
+                    </li>
+                </ul>
 
             </p>
         </div>
