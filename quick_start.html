@@ -205,13 +205,14 @@ img{
             <h2>Basic usage</h2>
             <p>
                 The user go to some web page, right click and from the contextual menu choose the <img src="images/image-20.png"></img>. This will show a <strong>quick download dialog</strong>:
-                <div class = "img-container"><img src="images/image-21.png"></img></div>
+                <div class = "img-container"><img src="images/image-21.png" ></img></div>
                 The user checks de desired file types (in our case pdfs) and optionally choose a download directory (defined as a subfolder of the Chrome main Downloads directory) and finally clicks the <strong>Download now</strong> button.
                     <p>
                         The files start to download and, if all goes well, the user will found them in the <code>Downloads/Algebra</code> subfolder. <br><strong style="color:#3F51B5">That's all!</strong>
                     </p> 
                     <hr>
-                    <p><strong>Tip:</strong> If the user make a <strong>text selection on the web page</strong>, the addon will try to include only the links from that selection (the context menu will also include the option <img src="images/image-20b.png"></img>)</p>
+                    <p><strong>Tip:</strong> If the user make a <strong>text selection on the web page</strong>, the addon will try to include only the links from that selection
+                         (the context menu will also include the option <img src="images/image-20b.png" style="vertical-align: bottom;"></img>)</p>
                     <p>This workflow <strong>lacks advanced filtering/renaming options</strong> but may be appropriate in many situations.</p>
                 
 
@@ -331,6 +332,29 @@ img{
                         The user can adjust the addon popup <strong>width</strong> using the button <img src="images/image-24.png"></img> (three value toggle).</li> 
                     <!-- <li>There are many more advanced features of extensions, more or less experimental. For example</li> -->
                 </ol>
+
+            </p>
+        </div>
+
+        <div class="content" id="next">
+            <h2>What's next</h2>
+
+            <p>
+                There are many others features. For example:
+                <ul>
+                    <li>
+                        The links can be <code>imported</code> from clipboard, from a text file or generated using a <code>Pattern URL</code> dialog
+                        <br>Also, the links can be <code>exported</code> using a flexible mask system (this can be useful if the user wants to use the generated list with an external file downloader)
+                    </li>
+                    <li>
+                        The user can create complex filters and save them as custom categories (see the Custom Filters section from the settings dialog)
+                    </li>
+                    <li>
+                        The addon has a buitin routing system (see the Automatic Folders section from the settings dialog). Here the user can define custom folders where downloads can be automatically directed based on user-defined rules.
+                    </li>
+                </ul>
+
+                
 
             </p>
         </div>
