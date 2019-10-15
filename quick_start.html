@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>SMD FAQ</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         html {
             background-color: whitesmoke;
@@ -190,7 +191,7 @@ img{
             </li>
         </div>
 
-        <div class="content">
+        <div class="content" id="topics">
             <ul style="list-style: none;">
                 <li><a href="#basic-usage" class = "link">Basic usage</a></li>
                 <li><a href="#main-workflow" class = "link">A more flexible workflow</a></li>
@@ -243,7 +244,7 @@ img{
                     Click the corresponding help button <img src="images/image-8.png"></img> for more filtering details (this help button is visible only the textfilter field is focused). 
                 </li>
                 <li>
-                    Now you have isolated all desired pdf. Next check all items <strong>at once</strong> (using the top main check) or only <strong>a range</strong> (using <code>shift + click</code>) and finally click the <strong>download now </strong> button from bottom-right corner
+                    Now you have isolated all desired pdf. Next check all items <strong>at once</strong> (using the top main checkbox) or only <strong>a range</strong> (using <code>shift + click</code>) and finally click the <strong>download now </strong> button from bottom-right corner
                     <div class = "img-container"><img src="images/image-10.png"></img></div>
                     <div class = "img-container"><img src="images/image-9.png"></img></div>
                 </li>
@@ -258,9 +259,9 @@ img{
         <div class="content" id="setting-directory">
             <h2>Setting a custom download directory</h2>
             <p>
-                By default, all downloaded files go to the Chrome global download directory <img src="images/image-12.png"></img> (usally named <strong>Downloads</strong>)
+                By default, all downloaded files go to the Chrome global download directory <img src="images/image-12.png"></img> (usually named <strong>Downloads</strong>)
                 <div>
-                    My addon cannot change by itself this main download directory (a known webextensions system limitation) but what it's possible and really useful is to set <strong>subfolders</strong> inside it.
+                    My addon cannot set folders outside this main download directory (a known webextensions system limitation) but what it's possible and really useful is to set <strong>subfolders</strong> inside it.
                     <div class = "img-container"><img src="images/image-13.png"></img></div>
                 </div>
                 So you write <code>algebra/groups</code> in the dedicated directory field. Now all downloaded files go specifically to the <code>Downloads/Algebra/Groups </code> subfolder.
@@ -284,7 +285,7 @@ img{
 
             <p>
                 In many cases, the user can accept the default filenames, leaving unchanged the  <img src="images/image-16.png"></img> as displayed 
-                name for the resources list and clicking <img src="images/image-17a.png"></img> for <strong>immediate downloading</strong> (after checking desired items).<br>
+                name for the resources list and next clicking <img src="images/image-17a.png"></img> for <strong>immediate downloading</strong> (after checking desired items).<br>
                 But, sometimes, it's better to do some <strong>batch renaming</strong> before downloading and in this case the user <strong>will click on the other button </strong> 
                 <img src="images/image-17b.png"></img>. This <strong>will simply add</strong> the checked items to the (passive) download list:
                 <div class = "img-container"><img src="images/image-18.png"></img></div>
@@ -304,12 +305,12 @@ img{
             <h2>Some random tips</h2>
 
             <p>
-                <ul>
+                <ol>
                     <li>
                         Those items from the resource list that are also on the download list use a distinctive color for their checkboxes (<img src="images/image-22a.png"></img> or <img src="images/image-22b.png"></img>)
                         and cannot be sended again on download list (unless they are first removed from the download list). So, in general, you should not worry for sending the same file multiple times on the download list.
                     </li>
-                    <li> The extension remember if an item was downloaded in the current session or recent history and make them visible on the resource list using a green color text
+                    <li> The extension remembers if an item was downloaded in the current session or recent history and make them visible on the resource list using a green color text
                         <div class = "img-container"><img src="images/image-23.png"></img></div>
                     </li>
                     
@@ -319,9 +320,12 @@ img{
                         (see the image above for an example).
                     </li>
                     <li>
-                        On the download list the user can move up/down a group of selected items by using <code>ctrl + up/down arrow keys</code>. This can be useful when using contor masks
+                        On the download list the user can move up/down a group of selected items by using <code>ctrl + up/down arrow keys</code>. This can be useful when using contor masks, for example.
                     </li>
-                </ul>
+                    <li>
+                        The user can adjust the addon popup <strong>width</strong> using the button <img src="images/image-24.png"></img> (three value toggle).</li> 
+                    <!-- <li>There are many more advanced features of extensions, more or less experimental. For example</li> -->
+                </ol>
 
             </p>
         </div>
