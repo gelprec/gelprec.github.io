@@ -211,8 +211,8 @@
                         downloading</strong>
                     <strong style="color: #B71C1C;">is NOT checked!</strong>
                     <br>
-                    Otherwise, for <strong style="color: #B71C1C;">every item</strong> in the download queue <strong style="color: #F5F5F5;border: 2px solid red;background-color: red;"> you will be prompted to choose a
-                        name/directory</strong> via a
+                    Otherwise, for <strong style="color: #B71C1C;">every item</strong> in the download queue <strong style="color: #F5F5F5;border: 2px solid #B71C1C;background-color: #B71C1C;">&nbsp;you will be prompted to choose a
+                        name/directory&nbsp;</strong> via a
                     <strong>Save As</strong> dialog (try to figure out what that means for a list of, say, 500 downloads
                     or more)!
             </li>
@@ -221,7 +221,7 @@
                 <tr>
                     <td><a href="#basic-usage" class="link">Basic usage</a></td>
                     <td><a href="#main-workflow" class="link">A more flexible workflow</a></td>
-                    <td><a href="#multirename" class="link">Batch renaming</a></td>
+                    <td><a href="#multirename" class="link">Download list panel</a></td>
                     <td><a href="#tips" class="link">Some random tips</a></td>
                 </tr>
             </table>
@@ -257,7 +257,7 @@
         <div class="content" id="main-workflow">
             <h2>A more flexible workflow</h2>
 
-            <p>Say, for example, you visit a Lecture Notes type site (with many pdf resources)
+            <p>Say, for example, you visit a math Lecture Notes type site (with many pdf resources)
                 and you need to download only the resources that include the term <strong class="color">"group"</strong>
                 inside their
                 link text (as user see it on page):
@@ -266,7 +266,7 @@
             <div class="img-container"><img src="images/image-30.png"></img></div>
             <p>The typical Simple mass downloader popup window will look like this
 
-                <div class="img-container"><img src="images/image-31b.png"></img></div>
+                <div class="img-container"><img src="images/image-31.png"></img></div>
             </p>
             <p><strong>The steps explained:</strong></p>
             <ul>
@@ -307,19 +307,64 @@
                         all downloaded files will go
                         specifically to the <code>Downloads/Algebra/Groups </code> subfolder.</div>
                 </li>
+                <li>
+                    <div class="lidiv"><span class="color">Fourth step</span>: setting a custom name mask.</div>
+                    <div class="lidiv"> All files have a default filename. 
+                        For example the highlighted item from the screenshot above will get the name <code>MIT18_703S13_pra_l_1.pdf</code> 
+                        But many times it's better to use for naming the text of the link, as the user see it on the web page. 
+                        For this you have to use the name mask <code>{text}.{ext}</code>. </div>
+                        <div class="lidiv">
+                        Now the same item from above will get the much more descriptive name <code>The alternating groups (PDF)</code> (at least for mathematicians...)
+                        As you see, this specific mask is useful enough to deserve a dedicated button but the user can use a lot of other masks (click the corresponding help button for more details).
+                        <div class="img-container"><img
+                            src="images/image-33b.png"></img></div>
+                        
+
+                    </div>
+                </li>
 
                 <li>
-                    <div class="lidiv"><span class="color">Last step</span>: if you can live with the default
-                        filenames, you only have to click the <strong>download now</strong> button <img
-                            src="images/image-17a.png"></img> for
-                        <strong>immediate downloading</strong></div>
+                    <div class="lidiv"><span class="color">Last step</span>: Now you only have to click the <strong>download now</strong> button <img
+                            src="images/image-17a.png"></img> so that the checked items will start downloading <strong>immediately</strong>. Or, if you prefer, only send the items to queue by clicking on the other button</strong>
+                        <img src="images/image-17b.png"></img> and select later the items for downloading.
                 </li>
 
             </ul>
         </div>
 
 
-        <div class="content" id="multirename">
+        <div class="content" id="downloadlist">
+                <h2>Download list panel</h2>
+    
+                <p>
+
+    
+    Here you can do the normal download management: start items individually or in groups, pause, resume, cancel, remove items etc.
+
+
+                    
+                </p>
+                <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">Note that there is a <code>Select all</code> button and also
+                    is possible to select only a range
+                    of items using <code>shift + click</code>or <strong>individually</strong> (using <code>ctrl + click</code>)</div>
+                <p>
+                        The inactive items from the queue <strong>can still be edited before downloading</strong>, either individually (using the corresponding <img
+                        src="images/image-34.png"></img> button) or in group (using the <strong>multirename dialog</strong>). Note that the selected items can be moved up/down using <code>ctrl + up/down arrow keys</code>. 
+                        This can be useful when using contor masks, for example.
+
+                </p>
+                
+<div class="lidiv">The multirename dialog it's a more advanced version of the simple name mask dialog from the resources list panel, with search/replace or preview functionality</div>
+                
+                <p>Finally, the user selects the desired items and clicks the <strong>Start selected</strong> button. A finished item looks like:
+                    <div class="img-container"><img src="images/image-32.png"></img></div>
+                    You can directly open the file clicking its name or open the directory where the file was downloaded
+                    using the corresponding folder icon.
+                </p>
+            </div>
+
+
+        <div class="content" id="multirename" style="display:none;">
             <h2>Batch renaming</h2>
 
             <p>
