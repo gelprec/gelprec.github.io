@@ -40,6 +40,19 @@
             margin-bottom: 1rem;
         }
 
+        span.note {
+            font-weight: 600;
+        }
+
+        .content.mv3 {
+            color: #01579B;
+        }
+
+        .manifest{
+            font-weight: 600;
+            color:darkred;
+        }
+
         p,
         div {
             font-family: Roboto
@@ -201,9 +214,9 @@
 
 <body class="markdown-body">
     <div class="container">
-        <div class="content">
-Important note: Simple Mass Downloader has been migrated to Chrome Manifest V3, as required by the current Chrome extension platform. Most features should work as before, but this release includes major internal changes. If you notice anything unusual, please report the issue with reproduction steps.
-        </div>
+    <div class="content mv3">
+        <span class="note">Important note</span>: <span>Simple Mass Downloader</span> has been migrated to <span class="manifest">Chrome Manifest V3</span>, as required by the current Chrome extension platform. Most features should work as before, but this release includes major internal changes. If you notice anything unusual, please report the issue with reproduction steps.
+    </div>
         
         <div class="content">
                 <h1>Quick Start Tutorial</h1>
