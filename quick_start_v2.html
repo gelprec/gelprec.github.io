@@ -230,8 +230,9 @@
                     <br>
                     Otherwise, for <strong style="color: #B71C1C;">every item</strong> in the download queue <strong style="color: #F5F5F5;border: 2px solid #B71C1C;background-color: #B71C1C;">&nbsp;you will be prompted to choose a
                         name/directory&nbsp;</strong> via a
-                    <strong>Save As</strong> dialog (try to figure out what that means for a list of, say, 500 downloads
-                    or more)!
+                    <strong>Save As</strong> dialog. Imagine what that means for a list of, say, 500 downloads
+                    or more.
+                </div>
             </li>
 
             <table>
@@ -248,19 +249,19 @@
 
         <div class="content" id="basic-usage">
             <h2>Basic usage</h2>
-            <p>
-                The user go to some web page, right click and from the contextual menu choose the <img
+            <div>
+                Go to a web page, right-click it, and choose <img
                     src="images/image-20.png"></img>. This will show a <strong>quick download dialog</strong>:
                 <div class="img-container"><img src="images/image-21.png"></img></div>
-                The user checks de desired file types (in our case pdfs) and optionally choose a download directory
-                (defined as a subfolder of the Chrome main Downloads directory) and finally clicks the <strong>Download
+                Check the desired file types (PDFs in this example), optionally choose a download directory
+                defined as a subfolder of Chrome's main Downloads directory, and finally click the <strong>Download
                     now</strong> button.
                 <p>
-                    The files start to download and, if all goes well, the user will found them in the
+                    The files start downloading and, if all goes well, you will find them in the
                     <code>Downloads/Algebra</code> subfolder. <br><strong style="color:#E91E63">That's all!</strong>
                 </p>
                 <hr>
-                <p><strong>Tip:</strong> If the user make a <strong>text selection on the web page</strong>, the addon
+                <p><strong>Tip:</strong> If you make a <strong>text selection on the web page</strong>, the extension
                     will try to include only the links from that selection
                     (the context menu will also include the option <img src="images/image-20b.png"
                         style="vertical-align: bottom;"></img>)</p>
@@ -268,36 +269,36 @@
                     many situations.</p>
 
 
-            </p>
+            </div>
         </div>
 
         <div class="content" id="main-workflow">
             <h2>A more flexible workflow</h2>
 
-            <p>Say, for example, you visit a math Lecture Notes type site (with many pdf resources)
+            <p>Say, for example, that you visit a mathematics lecture-notes site with many PDF resources
                 and you need to download only the resources that include the term <strong class="color">"group"</strong>
                 inside their
-                link text (as user see it on page):
+                link text, as displayed on the page:
 
             </p>
             <div class="img-container"><img src="images/image-30.png"></img></div>
-            <p>The typical Simple mass downloader popup window will look like this
+            <div>The typical Simple Mass Downloader popup window will look like this:
 
                 <div class="img-container"><img src="images/image-31.png"></img></div>
-            </p>
+            </div>
             <p><strong>The steps explained:</strong></p>
             <ul>
                 <li>
                     <div class="lidiv"><span class="color">First step:</span> you press the <strong>Load page
                             links</strong> button. This usually fills
-                        the resources list with all sort of links, not only the desired pdfs.</div>
+                        the resource list with all sorts of links, not only the desired PDFs.</div>
                 </li>
                 <li>
                     <div class="lidiv"><span class="color">Second step</span>: you have to filter this list, such that
-                        only desirable links stay
+                        only the desired links remain
                         here.
-                        You can start filtering process by writing <code>pdf</code>
-                        in the dedicated extensions field (or <code> pdf epub doc</code> if you seek more types) and next write the term <code>group</code> in the Text filter box</div>
+                        Start filtering by entering <code>pdf</code>
+                        in the extensions field (or <code>pdf epub doc</code> if you want several types), then enter <code>group</code> in the Text filter box.</div>
 <!--                     <div class="lidiv"> Note that, by default, the items on
                         the resource list shows with their "natural" filenames and these filenames look sometimes very
                         different from the text links as visible on the page.
@@ -305,18 +306,18 @@
                         smart enough to filter only those items with term <strong>group</strong> in their text
                         attribute.
                     </div> -->
-                    <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">Now you have isolated all desired pdf. Next check all
+                    <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">You have now isolated all the desired PDFs. Next, check all
                         items <strong>at once</strong> (using the top master checkbox) or only <strong>a range</strong> (using
-                        <code>shift + click</code>) </div>
+                        <code>shift + click</code>).</div>
                 </li>
                 <li>
                     <div class="lidiv"><span class="color">Third step</span>: setting a custom download directory.</div>
-                    <div class="lidiv"> By default, all downloaded files go to the Chrome global download directory <img
+                    <div class="lidiv"> By default, all downloaded files go to Chrome's main download directory <img
                             src="images/image-12.png"></img> (usually named <strong>Downloads</strong>)</div>
 
                     <div class="lidiv">
-                        My addon cannot set folders outside this main download directory (a known webextensions system
-                        limitation) but what it's possible and really useful is to set <strong>subfolders</strong>
+                        The extension cannot set folders outside this main download directory due to a browser extension
+                        security limitation. However, it can set <strong>subfolders</strong>
                         inside
                         it.
                     </div>
@@ -327,12 +328,12 @@
                 <li>
                     <div class="lidiv"><span class="color">Fourth step</span>: setting a custom name mask.</div>
                     <div class="lidiv"> All files have a default filename. 
-                        For example the highlighted item from the screenshot above will get the name <code>MIT18_703S13_pra_l_1.pdf</code> 
-                        But many times it's better to use as name the text of the link as the user see it on the web page. 
-                        For this you have to use the name mask <code>{text}.{ext}</code>. </div>
+                        For example, the highlighted item from the screenshot above will get the name <code>MIT18_703S13_pra_l_1.pdf</code>.
+                        It is often better to use the link text displayed on the web page as the filename.
+                        For this, use the name mask <code>{text}.{ext}</code>. </div>
                         <div class="lidiv">
-                        Now the same item from above will get the much more descriptive name <code>The alternating groups (PDF)</code> (at least for mathematicians...)
-                        As you see, this specific mask is useful enough to deserve a dedicated button but the user can use a lot of other masks (click the corresponding help button for more details).
+                        The same item will now get the more descriptive name <code>The alternating groups (PDF)</code> (at least for mathematicians).
+                        This mask is useful enough to have a dedicated button, but many other masks are also available. Click the corresponding help button for details.
                         <div class="img-container"><img
                             src="images/image-33b.png"></img></div>
                         
@@ -341,9 +342,9 @@
                 </li>
 
                 <li>
-                    <div class="lidiv"><span class="color">Last step</span>: Now you only have to click the <strong>download now</strong> button <img
-                            src="images/image-17a.png"></img> so that the checked items will start downloading <strong>immediately</strong>. Or, if you prefer, only send the items to queue by clicking on the other button</strong>
-                        <img src="images/image-17b.png"></img> and later selects the items for downloading.
+                    <div class="lidiv"><span class="color">Last step</span>: click the <strong>Download now</strong> button <img
+                            src="images/image-17a.png"></img> to start downloading the checked items <strong>immediately</strong>. Alternatively, send the items to the queue by clicking the other button
+                        <img src="images/image-17b.png"></img>, then select them for downloading later.</div>
                 </li>
 
             </ul>
@@ -356,48 +357,46 @@
                 <p>
 
     
-    Here you can do the normal download management: start items individually or in groups, pause, resume, cancel, remove items etc.
+    Here you can perform the usual download management operations: start items individually or in groups, pause, resume, cancel, or remove items.
 
 
                     
                 </p>
-                <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">Note that there is a <code>Select all</code> button and also
-                    is possible to select only a range
-                    of items using <code>shift + click</code>or <strong>individually</strong> (using <code>ctrl + click</code>)</div>
+                <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">There is a <code>Select all</code> button. You can also select a range
+                    of items using <code>shift + click</code>, or select items <strong>individually</strong> using <code>ctrl + click</code>.</div>
                 <p>
                         The inactive items from the queue <strong>can still be edited before downloading</strong>, either individually (using the corresponding <img
-                        src="images/image-34.png"></img> button) or in group (using the <strong>multirename dialog</strong>). Note that the selected items can be moved up/down using <code>ctrl + up/down arrow keys</code>. 
-                        This can be useful when using contor masks, for example.
+                        src="images/image-34.png"></img> button) or as a group using the <strong>multi-rename dialog</strong>. Selected items can be moved up or down using <code>ctrl + up/down arrow keys</code>.
+                        This can be useful when using counter masks, for example.
 
                 </p>
                 
-<div class="lidiv">The multirename dialog it's a more advanced version of the simple name mask dialog from the resources list panel, with search/replace or preview functionality.</div>
+<div class="lidiv">The multi-rename dialog is a more advanced version of the simple name mask dialog from the resource list panel, with search-and-replace and preview functionality.</div>
                 
-                <p>Finally, the user selects the desired items and clicks the <strong>Start selected</strong> button. A finished item looks like:
+                <div>Finally, select the desired items and click the <strong>Start selected</strong> button. A finished item looks like:
                     <div class="img-container"><img src="images/image-32.png"></img></div>
-                    You can directly open the file clicking its name or open the directory where the file was downloaded
+                    You can open the file directly by clicking its name, or open the directory where it was downloaded
                     using the corresponding folder icon.
-                </p>
+                </div>
             </div>
 
 
         <div class="content" id="multirename" style="display:none;">
             <h2>Batch renaming</h2>
 
-            <p>
-                Sometimes, it's better to do some <strong>batch renaming</strong> before downloading and, in this
-                case, the user <strong style = "color:#3F51B5;">will click on the other button</strong>
+            <div>
+                Sometimes, it is better to rename items in batches before downloading. In this
+                case, click <strong style = "color:#3F51B5;">the other button</strong>
                 <img src="images/image-17b.png"></img>. This <strong>will simply add</strong> the checked items to the
-                (passive) download list, with their <strong>default file names</strong>:
+                (passive) download list, with their <strong>default filenames</strong>:
                 <div class="img-container"><img src="images/image-18.png"></img></div>
 
-                Of course, the user can start individual items or edit their name/directory using the corresponding buttons
+                Of course, you can start individual items or edit their name or directory using the corresponding buttons.
                 <div class="img-container"><img src="images/image-11.png"></img></div>
-                <div class="lidiv">But, usually, is better to batch rename the <strong>selected items</strong> using the <strong>name masks</strong> from the <strong>
-                    multirename dialog</strong>.</div>
-                    <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">Note that there is a <code>Select all</code> button and also
-                        is possible to select only a range
-                        of items using <code>shift + click</code>or <strong>individually</strong> (using <code>ctrl + click</code>)</div>
+                <div class="lidiv">Usually, it is better to rename the <strong>selected items</strong> in batches using the <strong>name masks</strong> from the <strong>
+                    multi-rename dialog</strong>.</div>
+                    <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">There is a <code>Select all</code> button. You can also select a range
+                        of items using <code>shift + click</code>, or select items <strong>individually</strong> using <code>ctrl + click</code>.</div>
                 <div class="img-container"><img src="images/image-19.png"></img></div>
                 <div class="lidiv">Using appropriate name masks, the items get <span class="color">much better
                         names</span>. Here we have used the <code>{text}</code> mask and the
@@ -407,39 +406,35 @@
 
 
                 
-            </p>
-            <p>Finally, the user clicks the <strong>Start selected</strong> button. A finished item looks like:
+            </div>
+            <div>Finally, select the desired items and click the <strong>Start selected</strong> button. A finished item looks like:
                 <div class="img-container"><img src="images/image-32.png"></img></div>
-                You can directly open the file clicking its name or open the directory where the file was downloaded
+                    You can open the file directly by clicking its name, or open the directory where it was downloaded
                 using the corresponding folder icon.
-            </p>
-
-            </p>
+            </div>
         </div>
 
         <div class="content" id="tips">
             <h2>Some random tips</h2>
 
-            <p>
                 <ol>
                     <li>
                         Those items from the resource list that are also on the download list use a distinctive color
                         for their checkboxes (<img src="images/image-22a.png"></img> or <img
                             src="images/image-22b.png"></img>)
-                        and cannot be sended again on download list (unless they are first removed from the download
-                        list). So, in general, you should not worry for sending the same file multiple times on the
+                        and cannot be sent to the download list again unless they are first removed from it. In general, you should not worry about sending the same file multiple times to the
                         download list.
                     </li>
-                    <li> The extension remembers if an item was downloaded in the current session or recent history and
-                        make them visible on the resource list using a green color text
-                        <div class="img-container"><img src="images/image-23.png"></img></div>The user can even remove this items using the <code>Remove already downloaded</code> command from the hamburger menu
+                    <li> The extension remembers whether items were downloaded in the current session or recent history and
+                        displays them in the resource list using green text.
+                        <div class="img-container"><img src="images/image-23.png"></img></div>You can remove these items using the <code>Remove already downloaded</code> command from the hamburger menu.
                     </li>
 
                     <li>
-                        Note that the user may get all attributes/information available for an individual item from the
+                        You can view all the attributes and information available for an individual item in the
                         resource list by right-clicking it.
-                        This will open an informative popup with all attributes available for that item (
-                        <code>url/title/text</code> etc.), including a thumbnail view for image type items
+                        This opens an informative popup with all the attributes available for that item (
+                        <code>URL/title/text</code>, etc.), including a thumbnail view for image items
                         (see the image above for an example).
                     </li>
 <!--                     <li>
@@ -447,67 +442,63 @@
                         <code>ctrl + up/down arrow keys</code>. This can be useful when using contor masks, for example.
                     </li> -->
                     <li>
-                        The user can adjust the addon popup <strong>width</strong> using the button <img
+                        You can adjust the extension popup <strong>width</strong> using the button <img
                             src="images/image-24.png"></img></li>
                             <li>
                                 There are some hotkeys available:
                             <ul>
                                 <li>
-                                    <code>Ctrl + V</code> for paste/import from clipboard (on both resource and download list panels)
+                                    <code>Ctrl + V</code> for paste/import from the clipboard (in both the Resource List and Download List panels)
                                 </li>
                                 <li>
-                                    <code>Ctrl + A</code> for select all items (on download list panels)
+                                    <code>Ctrl + A</code> to select all items (in the Download List panel)
                                 </li>
                                 <li>
-                                    <code>Ctrl + S</code> for start selected (on download list panels)
+                                    <code>Ctrl + S</code> to start selected items (in the Download List panel)
                                 </li>
                             </ul>
                             </li>
                     <!-- <li>There are many more advanced features of extensions, more or less experimental. For example</li> -->
                 </ol>
-
-            </p>
         </div>
 
         <div class="content" id="next">
             <h2>What's next</h2>
 
-            <p>
+            <div>
                 There are many other features. For example:
                 <ul>
                     <li>
-                        The links can be <strong>imported</strong> from clipboard, from a text file or generated using a
-                        <code>Pattern URL</code> dialog
+                        Links can be <strong>imported</strong> from the clipboard, from a text file, or generated using a
+                        <code>Pattern URL</code> dialog.
                         <br>Also, the links can be <strong>exported</strong> using a flexible mask system (this can be
-                        useful if the user wants to use the generated list with an external file downloader).
+                        useful if you want to use the generated list with an external file downloader).
                         See the <img src="images/image-27.png" style="vertical-align: bottom;"></img> menu button.
                     </li>
                     <li>
-                        The user can create complex filters and save them as custom categories (see the <strong>Custom
-                            Categories</strong> section from the settings dialog)
+                        You can create complex filters and save them as custom categories (see the <strong>Custom
+                            Categories</strong> section in the settings dialog).
                     </li>
                     <li>
-                        The addon has a built-in routing system (see the <strong>Automatic Folders</strong> section from
-                        the settings dialog). Here the user can define custom folders where downloads can be
+                        The extension has a built-in routing system (see the <strong>Automatic Folders</strong> section in
+                        the settings dialog). Here you can define custom folders where downloads can be
                         automatically directed based on user-defined rules.
                     </li>
                     <li>For images, there is also a special <strong>thumbnails view</strong> where items may be filtered
-                        by size or ordered by size descending order</li>
-                    <li>The addon has (an experimental) <strong>tabs dialog</strong> where the user selects tabs (active
-                        tab, all tabs, left or right tabs) and optionally filters pages items by various criteria.
-                        Finally, the found links are added to the resource list and ready for further operation (see the
+                        by size or sorted in descending order by size.</li>
+                    <li>The extension has a <strong>tabs dialog</strong> where you select tabs (active
+                        tab, all tabs, left or right tabs) and optionally filters page items by various criteria.
+                        Finally, the found links are added to the resource list and are ready for further operations (see the
                         <img src="images/image-26.png" style="vertical-align: bottom;"></img> button).
                     </li>
                 </ul>
 
 
 
-            </p>
+            </div>
         </div>
 
-
-
-
+    </div>
 </body>
 
 </html>
