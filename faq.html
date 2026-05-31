@@ -154,98 +154,97 @@ p.q strong {
 		
 		<h2> Frequently asked questions</h2>
 		
-		<p class = "q"><strong>Question 1</strong>. How to use this extension?</p>
-<p><strong>Answer</strong> Let's say, for example, that you have opened a web page with many pdf resources. The most basic workflow it to open the extension popup (via the browser toolbar icon) and click there the <code>Load page links</code> button. This usually fills the resources list with all sort of links, not only the desired pdfs. So the next step is to filter this list, such that only desired pdfs stays here. Write <code>pdf</code> in the extensions text field. Now only pdf type resources show in the list. If the list is still too large (you want only smaller subset) you may continue the filtering process indicating some relevant terms in the next text filter field. Finally, you check desired items individually or all at once and start immediate downloading using the corresponding button (on right bottom corner).</p>
-<p>The downloading items are now visible in the downloads tab of the popup; you can manage this list in the usual manner (pause, resume, open or remove individual items etc)</p></div>
+		<p class = "q"><strong>Question 1</strong>. How do I use this extension?</p>
+<p><strong>Answer</strong> Let's say, for example, that you have opened a web page with many PDF resources. The most basic workflow is to open the extension popup using the browser toolbar icon and click the <code>Load page links</code> button. This usually fills the resource list with all sorts of links, not only the desired PDFs. The next step is to filter the list so that only the desired PDFs remain. Enter <code>pdf</code> in the extensions field. Only PDF resources will now be displayed. If the list is still too large and you want only a smaller subset, continue filtering by entering relevant terms in the text filter field. Finally, check the desired items individually or all at once and start downloading immediately using the corresponding button in the bottom-right corner.</p>
+<p>The downloading items are now visible in the Downloads tab of the popup. You can manage this list in the usual manner: pause, resume, open, or remove individual items.</p></div>
 
 <div class="content">
-<p class = "q"><strong>Question 2</strong>. How about other alternative workflows?</p>
-<p><strong>Answer</strong> The general idea of the extension is to collect links to the resources list (with optional filtering) and finally to add checked items to the download queue. The collecting stage has many variations:</p>
+<p class = "q"><strong>Question 2</strong>. Are there alternative workflows?</p>
+<p><strong>Answer</strong> The general idea of the extension is to collect links in the resource list, optionally filter them, and finally add checked items to the download queue. The collection stage has several variations:</p>
 <ul>
-<li>using the web page context-menu: you can right-click individual links from the web page or a larger selected text region</li>
-<li>using the special tabs dialog; here you can collect links from <code>active tab | all tabs | right tabs | left tabs</code> and even decide if the collected links must be immediately downloaded or if the associated tabs must be finally closed.</li>
-<li>add links from the clipboard text using a dedicated menu (note that this clipboard text must have every url on a separate line)</li>
+<li>Use the web page context menu: right-click individual links or a larger selected text region.</li>
+<li>Use the special tabs dialog: collect links from the <code>active tab | all tabs | right tabs | left tabs</code>, optionally download the collected links immediately, or close the associated tabs when the operation is complete.</li>
+<li>Add links from clipboard text using the dedicated menu. Each URL must be on a separate line.</li>
 </ul>
 </div>
 
 
 <div class="content">
-<p class = "q"><strong>Question 3</strong>. The resource list has too many links and I find it difficult to recognize the wanted ones!</p>
+<p class = "q"><strong>Question 3</strong>. The resource list has too many links and I find it difficult to recognize the desired ones!</p>
 <p><strong>Answer</strong> By default, the resource list displays the estimated filenames of the collected links. These names are usually different from those displayed on the web page. There are many possible strategies here:</p>
 <ul>
-<li>If the desired items are images, it may be better to use the thumbnails view (there is a special toggle button for this). Here the images can be sorted by descending order or filtered by width/height.</li>
-<li>If you know the file extensions of the desired items, you can use this info for the extensions filter box.</li>
+<li>If the desired items are images, it may be better to use the thumbnails view. There is a special toggle button for this. Here the images can be sorted in descending order by size or filtered by width and height.</li>
+<li>If you know the file extensions of the desired items, use them in the extensions filter box.</li>
 <li>Sometimes it may be better to select a text zone on the web page (including relevant links) and use the context menu to extract only links from this selected text range.</li>
-<li>More generally, it's important to know that every item has some textual info associated to it. This info comes from the <strong>web attributes</strong> of that item, more precisely
+<li>More generally, every item has textual information associated with it. This information comes from the <strong>web attributes</strong> of that item, more precisely:
 <ul>
-<li>the url (the link address) visible on the status bar when you hover the link (on the web page)</li>
-<li>the filename, usually included in the url</li>
+<li>the URL (the link address) visible in the status bar when you hover over the link on the web page</li>
+<li>the filename, usually included in the URL</li>
 <li>the link text (as you see on the web page)</li>
-<li>the title text from the tooltip you see when hovering the link (on the web page)</li>
+<li>the title text from the tooltip displayed when you hover over the link on the web page</li>
 <li>the alt text (alternative text, usually associated with images)
 
 </li>
 
 </ul>
-<p>You can use all this available info to identify some specific words/terms associated with your desired items. Next, you must input this terms in the text filter box using an easy syntax, for example, <code>url:word_1 text: word_2 title:word_3</code>. Or simpler, <code>all: word</code> if you are not sure where the word comes from.</p>
+<p>You can use this information to identify specific terms associated with your desired items. Enter these terms in the text filter box using a simple syntax, for example <code>url:word_1 text:word_2 title:word_3</code>. Alternatively, use <code>all:word</code> if you are not sure which attribute contains the word.</p>
 </li>
-<li>Every item in the resource list can be right-clicked and this will reveal an informative popup will all info known for that item.</li>
+<li>Right-click any item in the resource list to display an informative popup with all the available information for that item.</li>
 </ul>
 </div>
 
 
 <div class="content">
-<p class = "q"><strong>Question 4</strong>. How to set a custom download directory?</p>
-<p><strong>Answer</strong> On the resource list tab, there is a <strong>directory</strong> input field. Here the user can set a download directory. A new folder is written in the form <code>aaa/bbb/.../zzz</code>. For example <code>Docs</code> or <code>Docs/Math/Algebra</code>. Please note that every such directory is defined only relative to the default download directory (this is a web extensions security limitation), so you can define only subdirectories of this main directory. Another thing you can do is to use the general browser settings to change the location of this default download directory.</p>
-<p>Also, the user can prepare a custom favorite folders list (see extension's options, the Download directories section). Once defined, this list will be available via autocomplete or simply by double-clicking this text field.</p>
+<p class = "q"><strong>Question 4</strong>. How do I set a custom download directory?</p>
+<p><strong>Answer</strong> The resource list tab contains a <strong>directory</strong> input field. Enter a folder in the form <code>aaa/bbb/.../zzz</code>, for example <code>Docs</code> or <code>Docs/Math/Algebra</code>. Every such directory is relative to the default download directory. This is a browser extension security limitation, so you can define only subdirectories of the main download directory. You can use the general browser settings to change the location of that main directory.</p>
+<p>You can also prepare a custom list of favorite folders in the <strong>Download directories</strong> section of the extension options. Once defined, this list is available via autocomplete or by double-clicking the directory field.</p>
 </div>
 
 
 
 <div class="content">
-<p class = "q"><strong>Question 5</strong>. Why there are two <strong>add to queue</strong> buttons?</p>
-<p><strong>Answer</strong> After checking some items from the resource list you can decide to send them either to the <strong>active queue</strong>, either to the <strong>passive queue</strong> (using the corresponding buttons). Sending to the active queue means that downloading starts immediately or as soon as possible. This is the best option if you are content with the default names or don't care too much about that. On the other hand,  sometimes it's better to rename queued items before starting downloading them. This can be done either individually (using the edit button associated with every item from download list) or in batch mode (using the multi-rename dialog)</p>
+<p class = "q"><strong>Question 5</strong>. Why are there two <strong>add to queue</strong> buttons?</p>
+<p><strong>Answer</strong> After checking items in the resource list, you can send them either to the <strong>active queue</strong> or to the <strong>passive queue</strong> using the corresponding buttons. Sending items to the active queue means that downloading starts immediately or as soon as possible. This is the best option if you are content with the default names. Sometimes, however, it is better to rename queued items before downloading them. You can do this individually using the edit button associated with each item in the download list, or in batches using the multi-rename dialog.</p>
 </div>
 
 
 
 
 <div class="content">
-<p class = "q"><strong>Question 6</strong>. I want to download some files from the resource list but I don't like the filenames used there. On the original web page, they had other, better names. How to change that?</p>
-<p><strong>Answer</strong> By default, the items on the resource list are displayed with their (estimated) file names, that corresponds to the name mask <code>{name}.{ext}</code>. But if the user clicks the name header of the resources table, he will be able to choose another attribute (url, title, text, alt text) for the actual displaying. The most obvious candidate is the <code>text</code> attribute; that usually corresponds to what the user sees on the web page. In this case, all the items will be displayed with the <code>{text}.{ext}</code> name mask. Sending to the queue will preserve this displayed mask.</p>
-<p>But once the items are added to the queue (not for immediate downloading), it's possible to rename them in more advanced ways. You can select some items and use the available multi-rename dialog for batch renaming them. Here you can set a common name mask using many types of available masks, and combine them in various ways. Also, it's possible here to do other batch operations (search/replace type, setting directories etc)</p>
+<p class = "q"><strong>Question 6</strong>. I want to download files from the resource list, but I prefer the names displayed on the original web page. How can I use them?</p>
+<p><strong>Answer</strong> By default, items in the resource list are displayed with their estimated filenames, using the <code>{name}.{ext}</code> name mask. Click the name header of the resources table to choose another attribute for display: URL, title, text, or alt text. The most obvious candidate is the <code>text</code> attribute, which usually corresponds to what you see on the web page. In this case, items are displayed with the <code>{text}.{ext}</code> name mask. Sending them to the queue preserves this displayed mask.</p>
+<p>Once items are added to the passive queue, you can rename them in more advanced ways. Select items and use the multi-rename dialog to rename them in batches. Here you can combine several types of masks and perform other batch operations, such as search and replace or setting directories.</p>
 </div>
 
 
 
 <div class="content">
-<p class = "q"><strong>Question 7</strong>. Your extension is not capable to download embedded videos. Why?</p>
-<p><strong>Answer</strong> My extension is, indeed, not designed to download embedded videos or streaming media (but only normal, direct links). For these, it's better to use more specialized video/media downloaders. The main reason is that these addons are most exposed to all sorts of legal issues and I don't want my extension to be taken down. But still, in the future, it's possible to add some more support for these types.</p>
+<p class = "q"><strong>Question 7</strong>. Why is the extension unable to download embedded videos?</p>
+<p><strong>Answer</strong> Simple Mass Downloader is designed for normal, direct file links. Embedded videos and streaming media use different delivery mechanisms and are outside its scope. For these resources, use a specialized video or media downloader.</p>
 </div>
 
 
 
 <div class="content">
-<p class = "q"><strong>Question 8</strong>. Your extension is not capable to download files from sites X, Y, Z...Why?</p>
-<p><strong>Answer</strong> My extension tries always to detect links that are included in the html source of the web pages. But sometimes this doesn't work well. Many sites don't really like their resources to be mass downloaded because this way the users skip the associated ads. So, in some cases, the URLs are embedded in nonstandard ways or, even worse, the resources are visible on the page as <em>fake</em> links, meaning that the real URLs of the resources are generated by the server on the fly, only when the user clicks their name.</p>
-<p>One solution to this problem is to use an appropriate userscript designed specifically for the site X. There are some very popular userscript managers around, for example <strong>Greasemonkey</strong> on Firefox or <strong>Tampermonkey</strong> on Chrome. If the user knew some javascript he may be able to build for site X a special userscript which facilitates subsequent downloading using Simple Mass Downloader extension. More precisely, my extension can recognize the special attributes <code>data-smd-url</code> and <code>data-smd-name</code> and use them for mass downloading. Of course, the main problem here is to build that helper userscript. This implies that the (knowledgeable) user manually analyze the source of the page, and build de appropriate userscript that will embedd into the page (via this special attributes) the information required for download.</p>
-<p>Another solution is to find eventually another extension designed specifically for the site X. There are many extensions of this type. For example one for Google Images downloading, other for SoundCloud etc. There are great chances to find such an extension if the site X is really a very popular one.</p>
+<p class = "q"><strong>Question 8</strong>. Why is the extension unable to download files from sites X, Y, or Z?</p>
+<p><strong>Answer</strong> The extension detects links exposed by the current page. It scans the page DOM, including accessible open shadow roots, but some sites expose resources in nonstandard ways. In other cases, the visible items are only <em>placeholder</em> links: the real URLs are generated on the fly, only after a user action. Such URLs cannot always be collected in advance.</p>
+<p>One possible solution is a helper userscript designed specifically for that site. With a userscript manager such as Tampermonkey, a knowledgeable user can expose the relevant information using the special attributes <code>data-smd-url</code> and <code>data-smd-name</code>. Simple Mass Downloader recognizes these attributes and can use them for batch downloading.</p>
+<p>Another option is to use an extension designed specifically for that site. Popular services often have specialized download extensions.</p>
 </div>
 
 
 
 <div class="content">
-<p class = "q"><strong>Question 9</strong>. Your extension is not capable to download the full-sized images, but only the thumbnails...Why?</p>
-<p><strong>Answer</strong> As for the previous question, it's possible that only the thumbnail links are included in the html source or the <i>full</i> links are obscured using various javascript tricks. See the previous answer for details and solutions.</p>
+<p class = "q"><strong>Question 9</strong>. Why does the extension sometimes detect only thumbnails instead of full-sized images?</p>
+<p><strong>Answer</strong> As in the previous question, the page may expose only thumbnail URLs. The full-sized image URLs may be generated dynamically or obscured by site-specific JavaScript. See the previous answer for possible solutions.</p>
 </div>
 
 
 
 <div class="content">
-<p class = "q"><strong>Question 10</strong>. There are too many bugs! You are aware of them?</p>
-<p><strong>Answer</strong> This extension is still in early development, so, unfortunately, bugs are still expected. Also, I tried to add quite a lot of features and this increased complexity means usually more bugs. Hopefully, this situation will be considerably improved as we approach version 1.00.</p>
-
-<p> User bug reports could be very helpful here. Especially if their reports are sufficiently detailed. A concrete example of a troublesome resource link / url is much more useful than a general complaint like "your extension didn't work". This would give me a chance to analyze the problem and eventually solve it.</p>
+<p class = "q"><strong>Question 10</strong>. I found a bug. How can I help?</p>
+<p><strong>Answer</strong> Simple Mass Downloader has many features and recently underwent a major internal migration to Chrome Manifest V3. Bugs and regressions are possible, especially on unusual sites or less common workflows.</p>
+<p>Detailed bug reports are very helpful. A concrete example of a troublesome page or resource URL, together with clear reproduction steps, is much more useful than a general complaint such as "the extension did not work". This makes it possible to analyze the problem and, when feasible, fix it.</p>
 </div>
 
 
