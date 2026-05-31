@@ -130,7 +130,7 @@
 	<!-- <img src="download.png" height="24px"></img> -->
 	<div id="warnings" class="content">
 		<div style="display:flex; justify-content: space-between">
-			<p> Thanks for testing
+			<p> Thanks for using the
 				<strong>Simple Mass Downloader</strong> extension!</p>
 		</div>
 		<p class="intro">Before using, please read the following advice/warnings:</p>
@@ -140,15 +140,15 @@
 				<div class="inner-li">
 					<b style="color: #B71C1C;">First of all, please verify</b> in your <a id="chrome-settings" style="cursor:pointer;text-decoration: underline;">Chrome
 						Download Settings</a> that the following option: <strong>Ask where to save each file before downloading</strong>
-					<b style="color: #B71C1C;">is NOT checked!</b></br>
+					<b style="color: #B71C1C;">is NOT checked!</b><br>
 					Otherwise,
 					<b style="color: #B71C1C">a lot of "Save As" dialog boxes will pop up</b>, defeating the main purpose of this
-					addon (or any other
-					<strong>mass downloading</strong> chrome extension)<b>!</b></div>
+					extension (or any other
+					<strong>mass downloading</strong> Chrome extension)<b>!</b></div>
 			</li>
 			<li>
-				<div class="inner-li">The extension is <strong>still in early development</strong>, so bug reports or suggestions
-					are welcomed (use this 
+				<div class="inner-li">The extension has recently been migrated to Chrome Manifest V3, so bug reports and suggestions
+					are welcome (use
 					<strong>
 						<a href="https://docs.google.com/forms/d/e/1FAIpQLSf2lAQv7kQ0g1eyfwMmx8nCEDlrBkKyZ8z3y9wow1nZ62cPFQ/viewform">this
 							web page</a>
@@ -156,23 +156,23 @@
 				</div>
 			</li>
 			<li>
-				<div class="inner-li">Development is mainly done in Windows, with limited testing in Linux (latest Ubuntu). The
-					extension may also work on Mac computers, but I have no testing possibility here.</div>
+				<div class="inner-li">Development is mainly done on Windows, with limited testing on Linux (latest Ubuntu). The
+					extension may also work on macOS, but it has not been tested there.</div>
 			</li>
 
 
 			<li>
 				<div class="inner-li">This extension is a <strong>general</strong> file downloader. It's <strong>not</strong>
-					intended for downloading streaming media or embedded video content: for these, it may be better to use other, more
-					specialized, browser add-ons (video downloaders, for example).
+					intended for downloading streaming media or embedded video content. For these resources, use a specialized
+					browser extension, such as a video downloader.
 				</div>
 			</li>
 			<li>
 				<div class="inner-li">The extension doesn't work in private browsing mode.</div>
 			</li>
 			<li>
-				<div class="inner-li">Inside the extension, the user may define custom download folders but these
-					<strong>are only relative to the default browser's download directory</strong>; this is a general web extensions
+				<div class="inner-li">Inside the extension, you may define custom download folders, but these
+					<strong>are relative to the browser's default download directory</strong>; this is a general browser extension
 					security limitation.</div>
 			</li>
 		</ul>
@@ -183,24 +183,24 @@
 	<div id="help" class="content">
 		<h3>
 			&nbsp;General Usage</h3>
-		<p>Unlike an external software that usually only uses the information contained in the link url, this mass downloader
+		<p>Unlike external software that usually uses only the information contained in the link URL, this mass downloader
 			can
 			take advantage of the various
 			<strong id="attributes-info">text attributes of the links</strong> on a web page (
-			<code>url, title, text, alt text etc</code>.) and use them in various contexts (when
-			<strong>filtering</strong> the resources list,
-			<strong>multi renaming</strong> resources or defining rules for
-			<strong>automatic folders</strong> etc.). On the other hand,
-			<strong>being just a web extension</strong>, it only uses the browser built-in download engine and consequently
-			<strong>it lacks some useful features</strong>: multithreading capabilities, bandwidth control, the possibility to
+			<code>URL, title, text, alt text, etc.</code>) and use them in various contexts: when
+			<strong>filtering</strong> the resource list,
+			<strong>renaming</strong> resources in batches, or defining rules for
+			<strong>automatic folders</strong>. On the other hand,
+			<strong>being just a web extension</strong>, it only uses the browser's built-in download engine and consequently
+			<strong>it lacks some useful features</strong>: multithreading capabilities, bandwidth control, the ability to
 			choose an arbitrary
-			directory for download or to rename files after downloading. Also, an external downloader has usually a better
-			resuming
-			support and a better detection of previously downloaded files. Many of these limitations are a consequence of the
+			download directory or rename files after downloading. Also, an external downloader usually has better
+			resume
+			support and better detection of previously downloaded files. Many of these limitations are a consequence of the
 			modern
-			browsers strong security policies. So, in general, preparing the list of download links (ie link collecting /
+			browsers' strong security policies. In general, preparing the list of download links (i.e. link collection,
 			filtering
-			/ initial renaming) is much more natural in the browser context than for an external downloader while the actual
+			and initial renaming) is more natural in the browser context, while the actual
 			process of downloading
 			may benefit more from an external downloader (but, fortunately, in 99% of cases the built-in browser download engine
 			is
@@ -216,38 +216,37 @@
 			<strong>main workflow</strong> involves three steps:</p>
 		<ul>
 			<li>
-				<div class="inner-li">The user add links/images etc. from the current page to the resource list and mark some of
-					them (after optional filtering)</div>
+				<div class="inner-li">Add links, images, and other resources from the current page to the resource list and mark
+					the desired items after optional filtering.</div>
 			</li>
 			<li>
-				<div class="inner-li">The user add marked files to download queue; This queued files may be optionally renamed
+				<div class="inner-li">Add the marked files to the download queue. These queued files may optionally be renamed
 					(individually or using the available
 					multi-rename dialog)</div>
 			</li>
 			<li>
-				<div class="inner-li">Finally, the user selects queued files (all or only a range) and start downloading them</div>
+				<div class="inner-li">Finally, select queued files, either all of them or only a range, and start downloading them.</div>
 			</li>
 		</ul>
 
-		<p>Note that unlike other bulk/mass download managers, this file downloader doesn't load automatically links from the
+		<p>Unlike some other bulk download managers, this extension does not automatically load links from the
 			active tab.
-			The user adds explicitly links from the
-			<strong>active tab|all tabs|left or right tabs</strong>, or using the web page's
+			You explicitly add links from the
+			<strong>active tab | all tabs | left or right tabs</strong>, or using the web page's
 			<strong>context menu</strong>. In this way, the list is successively augmented and after this initial collecting
-			stage, the user
-			may
-			<strong>filter/multi rename/marks for download</strong> selected items etc.</p>
+			stage, you may
+			<strong>filter, rename, or mark</strong> selected items for download.</p>
 
 		<p>A
-			<strong>more light workflow</strong> is possible if the user selects links via page context menu (or right clicks a
+			<strong>lighter workflow</strong> is available if you select links via the page context menu or right-click a
 			blank
-			point of the page): in this case, the extension opens a quick download dialog with minimal filtering options and a
+			point on the page: in this case, the extension opens a quick download dialog with minimal filtering options and a
 			<code>Download now</code> button. This workflow lacks advanced
 			<em>filtering/renaming</em> options but may be appropriate in many situations.</p>
 
 		<h4>Resources tab</h4>
-		<p>The main <code> Load page links</code> button empties the current list and fill it using only the active tab
-			links. But there are many other ways to add resources and all this extra methods will <strong>add</strong> links to
+		<p>The main <code>Load page links</code> button empties the current list and fills it using only links from the active tab.
+			There are many other ways to add resources, and all these additional methods <strong>add</strong> links to
 			the current resource list:</p>
 		<ul>
 			<li>
@@ -259,46 +258,42 @@
 			</li>
 <!-- 			<li>
 				<div class="inner-li">via the clipboard:
-					<strong>add</strong> urls from the clipboard text (every url on a separate line).</div>
+					<strong>add</strong> URLs from clipboard text, with each URL on a separate line.</div>
 			</li> -->
 			<li>
 				<div class="inner-li">via a dedicated
-					<strong>tabs button</strong> that opens a special dialog where the user selects tabs (active tab, all tabs, left
+					<strong>tabs button</strong> that opens a special dialog where you select tabs (active tab, all tabs, left
 					or right tabs)
-					and optionally filters pages items by various criteria. Finally, the found links are
-					<strong>added</strong> to the resource list and ready for further operations.</div>
-			</li>
-			<li>
-				<div class="inner-li">there is also an experimental dialog
-					<strong>Extra Scan</strong> (see the experimental features section)</div>
+					and optionally filters page items by various criteria. Finally, the found links are
+					<strong>added</strong> to the resource list and are ready for further operations.</div>
 			</li>
 		</ul>
 
 
-		<p>Clicking the resource list name header will open a popup where the user may quickly select the current attribute
+		<p>Clicking the resource list name header will open a popup where you may quickly select the current attribute
 			that generates
 			the displayed names for the resource list (
-			<em>filename/url/title/text/alt text/</em>), this may be useful for better identification of desired files.</p>
-		<p>Note that the user may get all attributes/information available for an individual item by right-clicking an item.
+			<em>filename/URL/title/text/alt text</em>). This may be useful for identifying the desired files.</p>
+		<p>Note that you may get all attributes/information available for an individual item by right-clicking an item.
 			This
 			will open an informative popup with all attributes available for that item (
-			<em>url/title/text</em> etc.), including a thumbnail view for image type items. Here the user may also open the link
+			<em>URL/title/text</em>, etc.), including a thumbnail view for image items. Here you may also open the link
 			in a
-			new tab or copy the url address for that item.</p>
-		<p>The resource list may be filtered by extension or by items text (<em>url, link text, title, alt text</em>). Note
-			that the text filter field use whitespaces as <code>AND</code> operator (in contrast to the extensions filter field
-			where whitespaces act as <code>OR</code> operator); here it's possible to use the special syntax <code>source:term</code>
-			where source is <code>all|url|name|text|title|alt</code> (or shorter corresponding variants <code>a|u|n|x|t|l</code>).
-			<strong>Negative</strong> forms are also possible (using <code>-</code> operator).</p>
-		<p>For advanced users there is also a special regular expressions mode: to enter that mode the text must begin with
+			new tab or copy its URL.</p>
+		<p>The resource list may be filtered by extension or by item text (<em>URL, link text, title, alt text</em>). Note
+			that the text filter field uses whitespace as an <code>AND</code> operator, in contrast to the extensions filter field,
+			where whitespace acts as an <code>OR</code> operator. You can use the special syntax <code>source:term</code>,
+			where <code>source</code> is <code>all|url|name|text|title|alt</code>, or the shorter corresponding variants <code>a|u|n|x|t|l</code>.
+			<strong>Negative</strong> forms are also possible using the <code>-</code> operator.</p>
+		<p>For advanced users, there is also a special regular-expression mode: to enter that mode the text must begin with
 			<code>r:</code> and the rest of the string is interpreted as a regular expression. The same special filtering rules
-			(for text filter field) apply to <code>Tabs scan / Extra scan</code> dialogs.</p>
+			(for the text filter field) apply to <code>Tabs scan / Extra scan</code> dialogs.</p>
 
 		<p>Filtering examples:</p>
 		<ul>
 			<li>
 				<div class="inner-li">for the extensions field:
-					<code>jpg png</code> filter those resources that has either
+					<code>jpg png</code> filters resources that have either a
 					<code>jpg</code> or
 					<code>png</code> extension.</div>
 			</li>
@@ -307,27 +302,27 @@
 					<ul>
 						<li>
 							<div class="inner-li">
-								<code>term_1 term_2</code> filter those resources for which the current displayed attribute contains
+								<code>term_1 term_2</code> filters resources for which the currently displayed attribute contains
 								<code>term_1</code> AND
 								<code>term_2</code>.</div>
 						</li>
 						<li>
 							<div class="inner-li">
-								<code>all:term_1</code> filter those resources for which at least an attribute contains
+								<code>all:term_1</code> filters resources for which at least one attribute contains
 								<code>term_1</code>. Shorter version
 								<code>a:term_1</code>.</div>
 						</li>
 						<li>
 							<div class="inner-li">
-								<code>url:term_1 text:term_2</code> filter those resources that have
-								<code>term_1</code> somewhere in their url AND
+								<code>url:term_1 text:term_2</code> filters resources that have
+								<code>term_1</code> somewhere in their URL AND
 								<code>term_2</code> somewhere in their link text. Shorter version:
 								<code>u:term_1 x:term_2</code>.</div>
 						</li>
 						<li>
 							<div class="inner-li">
-								<code>url:term_1 -text:term_2</code> filter those resources that have
-								<code>term_1</code> somewhere in their url and NOT
+								<code>url:term_1 -text:term_2</code> filters resources that have
+								<code>term_1</code> somewhere in their URL and NOT
 								<code>term_2</code> in their link text. Shorter version:
 								<code>u:term_1 -x:term_2</code> (note that the search terms do not have spaces).</div>
 						</li>
@@ -339,22 +334,22 @@
 
 
 		<p>For images, there is also a special
-			<strong>thumbnails view</strong> (where items may be ordered by size descending order)</p>
-		<p>Also in the first section, the user can set a common
+			<strong>thumbnails view</strong>, where items may be sorted in descending order by size.</p>
+		<p>In the Resources tab, you can also set a common
 			<strong>download directory</strong>, written in the form
 			<code>aaa/bbb/.../zzz</code> (this can only be specified as a subfolder of the default user download directory; it's
-			a webextensions system
+			a browser extension security
 			<strong>limitation</strong>)</p>
-		<p>After checking the desired files, the user clicks the
-			<code>Add to queue</code> button and gets to the downloads section of the extension.</p>
+		<p>After checking the desired files, click the
+			<code>Add to queue</code> button to continue to the Downloads tab.</p>
 		<h4>Downloads tab</h4>
-		<p>Here the user may start downloading individual items, or selects multiple items for downloading and finally clicks
+		<p>Here you may start downloading individual items, or select multiple items and finally click
 			the
-			<code>Start selected</code> button; The selecting may be done by
-			<code>ctrl+click</code> for individual selecting or
+			<code>Start selected</code> button. Selection may be done using
+			<code>ctrl + click</code> for individual items or
 			<code>shift + click</code> for range selections.</p>
-		<p>But before downloading, the user may change the
-			<em>filename/directory</em> for individual items (every non downloading item has an edit button) or mass rename
+		<p>Before downloading, you may change the
+			<em>filename/directory</em> for individual items (every item that has not started downloading has an edit button), or rename
 			selected files.
 			The default file name is
 			<code>{name}.{ext}</code> (for Firefox) or
@@ -366,43 +361,42 @@
 			<code>{counter}</code>,
 			<code>{host}</code>.</p>
 
-		<p>The multirename/batch actions dialog has also a
+		<p>The multi-rename and batch actions dialog also has a
 			<strong>search/replace</strong> section; here it's possible to use regular expressions. In this case, the
 			replacement string may
 			contain special patterns
 			<code>$1, $2...</code> etc. where
-			<code>$1</code> represent the first parenthesized submatch string and so on (other patterns are also available, for
+			<code>$1</code> represents the first parenthesized submatch string, and so on. Other patterns are also available; for
 			more details see
 			the
 			<em>Specifying a string as a parameter</em> section from
-			<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Description">here</a>
-			)</p>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Description">here</a>.</p>
 		<p>Note that all renaming procedures are available only for items that have not started downloading.</p>
-		<p>The user may set the maximum number of active servers and the numbers of active downloads per server</p>
+		<p>You may set the maximum number of active servers and the number of active downloads per server.</p>
 		<p>The context menu for an item contains the usual actions for this item:
-			<em>cancel/remove/retry/open file/open directory/pause</em>; The special combination
-			<code>ctrl + right click</code> reveal some info associated with that item (
-			<em>url/title/text</em> etc).</p>
+			<em>cancel/remove/retry/open file/open directory/pause</em>. The special combination
+			<code>ctrl + right click</code> reveals information associated with that item (
+			<em>URL/title/text</em>, etc.).</p>
 
-		<h3>Favorite folders + recent folders list</h3>
-		<p>There are some contexts where the user may set a download directory (inside resource list view or
-			<code>quick-dialog/multirename/edit-item</code> popups). The user may explicitly write the folder name in the
+		<h3>Favorite and recent folders</h3>
+		<p>There are some contexts where you may set a download directory (inside the resource list view or
+			<code>quick-dialog/multi-rename/edit-item</code> popups). You may explicitly enter the folder name in the
 			corresponding input text field or, sometimes more conveniently,
-			<strong>double click</strong> this input text field and select from a popup list either a recently used folder or a
+			<strong>double-click</strong> this input field and select from a popup list either a recently used folder or a
 			favorite folder.
-			The favorite folder list can be edited inside extension's general settings page.</p>
+			The favorite folder list can be edited on the extension's general settings page.</p>
 
 
 
 
 		<h3>Automatic Folders</h3>
 		<p>The settings dialog has an
-			<strong>Automatic Folders</strong> section; here the user may define custom folders where downloads can be
+			<strong>Automatic Folders</strong> section; here you may define custom folders where downloads can be
 			automatically directed
 			based on user-defined rules.</p>
 		<p>Every automatic folder has (at least) an associated rule set. A resource will be saved in this folder only if it
 			satisfies
-			all rules from the rule set. A rule must be written in the form</p>
+			all the rules in the rule set. A rule must be written in the form</p>
 		<p>
 			<code>keyword: word1, word2, ...</code>
 		</p>
@@ -413,17 +407,17 @@
 			<code>jpg</code> or
 			<code>png</code> or
 			<code>bmp</code>.</p>
-		<p>In this dialog, the user may define new folders or select for editing previous folders. A new folder is written in
+		<p>In this dialog, you may define new folders or select previously defined folders for editing. A new folder is written in
 			the
 			form
 			<code>aaa/bbb/.../zzz</code>. Please note that every folder is defined relative to the default download directory
-			(this is a web extensions security
+			(this is a browser extension security
 			limitation). So a folder defined as
 			<code>John/Music</code> is, in fact, a folder named
 			<code>Music</code> located inside a folder named
-			<code>John</code>, and this last one is created inside default download directory.</p>
-		<p>A folder can be removed (this only remove it from automatic folders list, not delete it from disk).</p>
-		<p>Extra Automatic Folders tips:</p>
+			<code>John</code>, and the latter is created inside the default download directory.</p>
+		<p>A folder can be removed. This only removes it from the automatic folders list; it does not delete it from disk.</p>
+		<p>Additional Automatic Folders tips:</p>
 		<ul>
 			<!-- 			<li>
 				<div class="inner-li">When defining automatic folders, the following masks may be used:
@@ -433,7 +427,7 @@
 					<code>george/{year}-{month}/music</code>.</div>
 			</li> -->
 			<li>
-				<div class="inner-li">A rule may be specified also as
+				<div class="inner-li">A rule may also be specified as
 					<code>keyword_1, keyword_2, ...: word1, word2, ...</code>. This type of rule is satisfied if the value associated
 					with
 					<code>keyword_1</code> (
@@ -448,41 +442,37 @@
 				</div>
 			</li>
 			<li>
-				<div class="inner-li">In the case of conflicting folders, the item's edit button has a warning red color; the
-					directory field from edit popup
-					has a dropdown arrow and the user has the possibility to choose between these folders. If no directory is chosen,
+				<div class="inner-li">In the case of conflicting folders, the item's edit button is displayed in a warning color. The
+					directory field in the edit popup
+					has a dropdown arrow, allowing you to choose between these folders. If no directory is chosen,
 					the
 					default download directory will be used.</div>
 			</li>
 		</ul>
 
-		<h3>Experimental features</h3>
+		<h3>Additional features</h3>
 		<h4>Extra scan dialog</h4>
-		<p>Here the user checks some resources from the list (web pages type) and in the background, the extension tries to
+		<p>This feature is not exposed in the current preliminary MV3 interface. It may return in a future version.</p>
+		<p>When available, select some web-page resources in the list and the extension will try in the background to
 			extract
 			links from these pages according to the filtering criteria specified in
 			<strong>Extra Scan</strong> dialog. Finally, the found links are inserted in the resource list below their
 			&quot;parent&quot;
-			item and ready for further actions.</p>
+			item and are ready for further actions.</p>
 		<h4>Sequential mode</h4>
 		<p>There is also a special
-			<code>sequential mode</code> for the situations where the server does not allow multiple files to be downloaded in
+			<code>sequential mode</code> for situations where the server does not allow multiple files to be downloaded in
 			parallel. The files are downloaded
-			one by one, with a 3 seconds interval between (this value may be changed in the settings dialog).</p>
+			one by one, with an interval between downloads. This value may be changed in the settings dialog.</p>
 		<h4>External userscripts support</h4>
-		<p>This extension tries always to detect links that are included in the html source of the web pages. But sometimes
-			this doesn't work well. Many sites don't really like their resources to be mass downloaded because this way the
-			users skip the associated ads. So, in some cases, the URLs are embedded in nonstandard ways or, even worse, the
-			resources are visible on the page as &quot;fake&quot; links, meaning that the real URLs of the resources are
-			generated by the server on the fly, only when the user clicks their name.</p>
-		<p>One solution to this problem is to use an appropriate userscript designed specifically for the site X. There are
-			some very popular userscript managers around, for example <strong>Greasemonkey</strong> on Firefox or <strong>Tampermonkey</strong>
-			on Chrome. If the user knew some javascript he may be able to build for site X a special userscript which
-			facilitates subsequent downloading using Simple Mass Downloader extension. More precisely, my extension <strong>can
+		<p>The extension detects links exposed by the current page. It scans the page DOM, including accessible open shadow
+			roots, but some sites expose resources in nonstandard ways. In other cases, the visible items are only placeholder
+			links: the real URLs are generated on the fly, only after a user action. Such URLs cannot always be collected in advance.</p>
+		<p>One possible solution is a helper userscript designed specifically for the site. With a userscript manager such as
+			<strong>Tampermonkey</strong>, a knowledgeable user can build a userscript that
+			facilitates subsequent downloading with Simple Mass Downloader. More precisely, the extension <strong>can
 				recognize the special attributes <code>data-smd-url</code> and <code>data-smd-name</code></strong> and use them for
-			mass downloading. Of course, the main problem here is to build the helper userscript. This implies that the
-			(knowledgeable) user manually analyze the source of the page, and build de appropriate userscript with the aim of
-			embedding into the page (via this special attributes) the information required for download.</p>
+			batch downloading. The helper userscript must expose the information required for download through these attributes.</p>
 		<!-- 			<h4>Proximity masks</h4>
 			Inside the batch actions dialog there is a special <i>add proximity masks</i> button. When clicking this button, 
 			the extension tries to extract <strong>contextual info besides the normal text attributes</strong> of selected items. This works well only
@@ -492,60 +482,60 @@
 			<li>
 				<div class="inner-li">When defining directories (including automatic or favorite folders), the following masks can
 					be used: <code>{yyyy}, {yy}, {MM}, {dd}, {host}, {ww}, {url:n}, {ext} </code>
+				</div>
 			</li>
 			<li>
 				<div class="inner-li">By default, the resource list uses filenames as the displayed name for list items, but the
-					user may change that in the
-					settings dialog. These filenames aren't always very accurate (including file extensions) because for building
-					resource
-					list we use only information available in the current page. But for checked items, the extension tries to fetch
+					you may change this in the
+					settings dialog. These filenames aren't always very accurate (including file extensions) because the resource
+					list is built using only information available on the current page. But for checked items, the extension tries to fetch
 					supplementary
-					metadata that may reveal more accurate naming data. Because fetching process may be relatively expansive, it is
+					metadata that may reveal more accurate naming data. Because the fetching process may be relatively expensive, it is
 					not enabled
 					by default for all items in the resource list.</div>
 			</li>
 			<li>
 				<div class="inner-li">After using
-					<code>Extra scan</code> dialog, if the found links are selected for the multirename/batch actions dialog, extra
+					<code>Extra scan</code> dialog, if the found links are selected for the multi-rename and batch actions dialog, extra
 					masks are
 					available:
 					<code>{pname}, {purl}</code>,
 					<code>{ptitle}</code>,
 					<code>{palt}</code>,
 					<code>{ptext}</code> where
-					<code>pname</code> is the name of parent item and so on.</div>
+					<code>pname</code> is the name of the parent item and so on.</div>
 			</li>
 			<li>
 				<div class="inner-li">In the
-					<code>Tabs scan / Extra scan</code> dialogs, at least a filtering criteria must be specified (to prevent the
-					resource list from being overloaded )</div>
+					<code>Tabs scan / Extra scan</code> dialogs, at least one filtering criterion must be specified to prevent the
+					resource list from being overloaded.</div>
 			</li>
 
 			<li>
-				<div class="inner-li">The items from the download list view can be reordered using
+				<div class="inner-li">Items in the download list view can be reordered using
 					<code>ctrl + up/down arrow keys</code>.</div>
 			</li>
 
 
 			<li>
-				<div class="inner-li">The number of items per page may be set individually for the resource list/thumbnails
-					grid/download list. For example
+				<div class="inner-li">The number of items per page may be set individually for the resource list, thumbnails
+					grid, and download list. For example
 					<code>200, 50, 50</code> instead of the default
-					<code>200</code> (equivalent with
+					<code>200</code> (equivalent to
 					<code>200, 200, 200</code>)</div>
 			</li>
 
 			<li>
-				<div class="inner-li">The user can directly insert/import a list of URLs into the download list using the dedicated submenus from the hamburger menu (download list tab). The sources from this (local) list are the clipboard or (only from chrome version) a local file. Note that the URLs must be separated by spaces or newlines. </div>
+				<div class="inner-li">You can directly import a list of URLs into the download list using the dedicated submenus from the hamburger menu in the Download List tab. The sources for this local list are the clipboard or, in Chrome, a local file. Note that the URLs must be separated by spaces or newlines.</div>
 			</li>
 
 			<li>
-				The user can also set a <strong style="font-weight: 500;">pattern URL</strong> using the dedicated submenu from the hamburger menu (download list tab). For example <code>http://example.com/image-[001:100].jpg </code>
+				You can also set a <strong style="font-weight: 500;">pattern URL</strong> using the dedicated submenu from the hamburger menu (Download List tab). For example <code>http://example.com/image-[001:100].jpg </code>
 				<div>These pattern URLs use the special batch descriptors <code>[start:end]</code> or <code>[start:end:step]</code>
 					where
 					<ul>
-						<li><code>start/end</code> are positive integers or ascii letters</li>
-						<li>[optional] <code>step</code> is an integer (eventually negative)</li>
+						<li><code>start/end</code> are positive integers or ASCII letters</li>
+						<li>[optional] <code>step</code> is an integer, optionally negative</li>
 					</ul>
 				</div>
 				<div>Note that <code>start/end</code> must have the same type <code>integer|upper|lower</code>. </div>
@@ -562,19 +552,19 @@
 							<td>[1:100]</td>
 							<td>1, 2, 3 ... 99, 100</td>
 						</tr>
-					</tr>
-					<td>[001:100]</td>
-					<td>001, 002, ... 099, 100</td>
-					</tr>
+						<tr>
+							<td>[001:100]</td>
+							<td>001, 002, ... 099, 100</td>
+						</tr>
 						<tr>
 							<td>[1:100:3]</td>
 							<td>1, 4, 7 ... 100 </td>
+						</tr>
 
 						<tr>
 							<td>[100:1:-3]</td>
 							<td>100, 97, 94 ... 1</td>
 						</tr>
-						<tr>
 						<tr>
 							<td>[a:z]</td>
 							<td>a, b, c ... z</td>
@@ -585,7 +575,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<p><strong>Comment</strong> The syntax used for batch descriptors broadly follows the one defined by DownThemAll <a href = "https://www.downthemall.org/howto/help/english-menu/batch-downloadsbatch-descriptors/">here</a>.</p>
+				<p><strong>Comment:</strong> The syntax used for batch descriptors broadly follows the one defined by DownThemAll <a href = "https://www.downthemall.org/howto/help/english-menu/batch-downloadsbatch-descriptors/">here</a>.</p>
 			</li>
 
 
@@ -593,18 +583,18 @@
 		<h3>Credits</h3>
 		<p>The extension uses some
 			<a href="https://material.io/icons/">Material Design Icons</a> and
-			<a href="https://material-components-web.appspot.com/">Components</a> (stylesheets)</p>
+			<a href="https://material-components-web.appspot.com/">Components</a> (stylesheets).</p>
 	</div>
 	<div id="template-1" style="display:none">
 
 		<div>
-			<strong>url</strong>: visible in the status bar when user hover the link</div>
+			<strong>URL</strong>: visible in the status bar when you hover over the link</div>
 		<div>
-			<strong>text</strong>: the visible link text, as it appears on page to the user</div>
+			<strong>text</strong>: the visible link text, as it appears on the page</div>
 		<div>
-			<strong>alt</strong>: the alternative text, usualy hidden and associated with images</div>
+			<strong>alt</strong>: the alternative text, usually hidden and associated with images</div>
 		<div>
-			<strong>title</strong>: an additional information that appears when user hover the link</div>
+			<strong>title</strong>: additional information that appears when you hover over the link</div>
 
 
 
