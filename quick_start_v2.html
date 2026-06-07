@@ -209,6 +209,12 @@
             width: 100%;
             margin-top: 1rem;
         }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: calc(50% - 30px) calc(50% - 30px);
+            column-gap: 60px;
+        }
     </style>
 
 </head>
@@ -230,39 +236,54 @@
             <p>Simple Mass Downloader uses a popup as its main interface. For quick access, pin the extension to the
                 Chrome
                 toolbar:</p>
+
+            <div class="grid-container">
+
+                <div>
+                    <img src="images/click-to-pin.png" style="vertical-align: bottom;max-height: 220px;">
+                </div>
+                <div>
+                    <ol>
+                        <li>
+                            Click the Extensions button in the toolbar.
+                        </li>
+                        <li>
+                            Find Simple Mass Downloader in the list.
+                        </li>
+                        <li>
+                            Click the pin icon next to its name.
+                        </li>
+                    </ol>
+                    <p>You can then open the downloader at any time by clicking its toolbar icon.</p>
+                    <div>
+                        <img src="images/click-to-pin-2.png" style="vertical-align: bottom;max-width: 220px;">
+                    </div>
+                </div>
+            </div>
+
+            <h4>There are two main workflows:</h4>
+
             <ol>
                 <li>
-                    Click the Extensions button in the toolbar.
+                    The simpler workflow uses the standard context menu on the web page. You can use it for the whole
+                    page,
+                    for an individual link or image, or for a selected range of text containing links. See <a
+                        href="#basic-usage" class="link">Basic usage</a>
+                    below.
                 </li>
                 <li>
-                    Find Simple Mass Downloader in the list.
-                </li>
-                <li>
-                    Click the pin icon next to its name
+                    The more flexible workflow uses the extension popup, opened from the extension button <img
+                        src="favicon.png" style="max-width: 1rem;"> in the browser
+                    toolbar. The popup has two main panels. First, <em style="text-decoration: underline;">load the
+                        links</em> from the current page into the <strong>Resource List</strong>, select the items you
+                    want, then <em style="text-decoration: underline;">send them</em> to the
+                    <strong>Download List</strong>. This workflow supports
+                    advanced
+                    filtering, renaming, and download options. See <a href="#main-workflow" class="link">A more
+                        flexible workflow</a>
+                    below.
                 </li>
             </ol>
-            <p>You can then open the downloader at any time by clicking its toolbar icon.</p>
-
-            <img height="250px" src="images/click-to-pin.png" style="vertical-align: bottom;"></img>
-
-
-            <li class="chrome" style="list-style: none; margin-top:1.5rem;">
-                <div class="inner-li" style='padding: 0 0.5rem;'>
-                    <strong>Important note: </strong>please verify in your <a id="smd-gelprec-chrome-settings"
-                        class="link">Chrome
-                        Download Settings</a> that the following option: <strong>Ask where to save each file before
-                        downloading</strong>
-                    <strong style="color: #B71C1C;">is NOT checked!</strong>
-                    <br>
-                    Otherwise, for <strong style="color: #B71C1C;">every item</strong> in the download queue <strong
-                        style="color: #B71C1C;">&nbsp;you will be prompted to choose a
-                        name/directory&nbsp;</strong> via a
-                    <strong>Save As</strong> dialog. Imagine what that means for a list of, say, 500 downloads
-                    or more.
-                </div>
-            </li>
-
-
 
             <table>
                 <tr>
@@ -274,7 +295,31 @@
             </table>
         </div>
 
+        <div class="content">
+            <div class="chrome" style="list-style: none; margin-top:1.5rem;">
+                <div class="inner-li" style='padding: 0 0.5rem;'>
+                    <strong>Important note: </strong>please verify in your <a id="smd-gelprec-chrome-settings"
+                        class="link">Chrome
+                        Download Settings</a> that the following option is <strong style="color: #B71C1C;">NOT
+                        checked</strong>:
 
+                    <p style="text-align: center;">
+                        <img src="images/ask-where.png" style="max-width: 450px;border: 1px solid gray;">
+                    </p>
+                    Otherwise, for <strong
+                        style="color: #B71C1C;">every item</strong> in the download queue <strong
+                        style="color: #B71C1C;">&nbsp;you will be prompted to choose a
+                        file name or directory&nbsp;</strong> via a
+                    <strong>Save As</strong> dialog. Imagine what that means for a list of 500 downloads or more.
+                    <p>
+                        Note: if the settings link does not open directly, copy and paste the following URL into your
+                        address bar:
+                        <code>chrome://settings/?search=ask+where</code>
+                    </p>
+
+                </div>
+            </div>
+        </div>
 
         <div class="content" id="basic-usage">
             <h2>Basic usage</h2>
