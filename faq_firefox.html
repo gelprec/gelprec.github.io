@@ -1,0 +1,238 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SMD FAQ</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+	<link rel="icon" type="image/png" href="favicon.png">
+    <style>
+		html {
+			background-color: whitesmoke;
+		}
+
+		#warnings {
+			margin-bottom: 2rem;
+			padding-top: 0;
+		}
+
+		#help {
+			padding-top: 1px;
+		}
+
+		.content {
+			/* border: 1px solid lightgrey; */
+			background-color: white;
+			color: #37474F;
+			padding: 1rem;
+			max-width: 42rem;
+			align-content: center;
+
+			text-justify: inherit;
+			text-align: justify;
+			box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+			margin-bottom:1rem;
+		}
+
+		.markdown-body {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+			line-height: 1.5;
+			color: #24292e;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+			font-size: 0.925rem;
+			line-height: 1.5;
+			word-wrap: break-word;
+		}
+
+		.markdown-body strong {
+			font-weight: 600;
+		}
+
+		.markdown-body code {
+			padding: 0.2em 0.4em;
+			margin: 0;
+			/* font-size: 85%; */
+			background-color: rgba(27, 31, 35, 0.05);
+			border-radius: 3px;
+		}
+
+		.markdown-body h3 {
+			font-size: 1.25em;
+		}
+
+		.markdown-body h4 {
+			font-size: 1em;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.intro {
+			color: black;
+			font-weight: bold;
+		}
+
+		#template-1 {
+			max-width: 30rem;
+			padding: 0.25rem;
+		}
+
+		#attributes-info {
+			color: #3F51B5;
+			cursor: pointer;
+		}
+
+		.popup {
+
+			pointer-events: "visible";
+			font-size: 0.9rem;
+			overflow: hidden;
+		}
+
+		.popup.light-theme {
+			color: #203d5d;
+			box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+			background-color: whitesmoke;
+			border: 1px solid gray;
+			border-radius: unset;
+			padding: 0;
+			/*     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); */
+		}
+
+		.bordered {
+			border: 2px solid #B71C1C;
+			padding: 0.25rem;
+		}
+
+.container {
+    height: 100%;
+    width: calc(min(600px, 100%));
+    max-width: 42rem;
+    width: calc(100% - 80px);
+    text-align: justify;
+				position: relative;
+			left: 50%;
+			transform: translate(-50%);
+}
+
+p.q {
+    color: #3F51B5;
+    font-weight: 500;
+}
+
+p.q strong {
+    color: #263238;
+}
+ 
+    </style>
+
+</head>
+
+<body class="markdown-body">
+        <div class="container">
+		<div class="content">                
+		
+		<h2> Frequently asked questions</h2>
+		
+		<p class = "q"><strong>Question 1</strong>. How do I use this extension?</p>
+<p><strong>Answer</strong> Let's say, for example, that you have opened a web page with many PDF resources. The most basic workflow is to open the extension popup using the browser toolbar icon and click the <code>Load page links</code> button. This usually fills the resource list with all sorts of links, not only the desired PDFs. The next step is to filter the list so that only the desired PDFs remain. Enter <code>pdf</code> in the extensions field. Only PDF resources will now be displayed. If the list is still too large and you want only a smaller subset, continue filtering by entering relevant terms in the text filter field. Finally, check the desired items individually or all at once and start downloading immediately using the corresponding button in the bottom-right corner.</p>
+<p>The downloading items are now visible in the Downloads tab of the popup. You can manage this list in the usual manner: pause, resume, open, or remove individual items.</p></div>
+
+<div class="content">
+<p class = "q"><strong>Question 2</strong>. Are there alternative workflows?</p>
+<p><strong>Answer</strong> The general idea of the extension is to collect links in the resource list, optionally filter them, and finally add checked items to the download queue. The collection stage has several variations:</p>
+<ul>
+<li>Use the web page context menu: right-click individual links or a larger selected text region.</li>
+<li>Use the special tabs dialog: collect links from the <code>active tab | all tabs | right tabs | left tabs</code>, optionally download the collected links immediately, or close the associated tabs when the operation is complete.</li>
+<li>Add links from clipboard text using the dedicated menu. Each URL must be on a separate line.</li>
+</ul>
+</div>
+
+
+<div class="content">
+<p class = "q"><strong>Question 3</strong>. The resource list has too many links and I find it difficult to recognize the desired ones!</p>
+<p><strong>Answer</strong> By default, the resource list displays the estimated filenames of the collected links. These names are usually different from those displayed on the web page. There are many possible strategies here:</p>
+<ul>
+<li>If the desired items are images, it may be better to use the thumbnails view. There is a special toggle button for this. Here the images can be sorted in descending order by size or filtered by width and height.</li>
+<li>If you know the file extensions of the desired items, use them in the extensions filter box.</li>
+<li>Sometimes it may be better to select a text zone on the web page (including relevant links) and use the context menu to extract only links from this selected text range.</li>
+<li>More generally, every item has textual information associated with it. This information comes from the <strong>web attributes</strong> of that item, more precisely:
+<ul>
+<li>the URL (the link address) visible in the status bar when you hover over the link on the web page</li>
+<li>the filename, usually included in the URL</li>
+<li>the link text (as you see on the web page)</li>
+<li>the title text from the tooltip displayed when you hover over the link on the web page</li>
+<li>the alt text (alternative text, usually associated with images)
+
+</li>
+
+</ul>
+<p>You can use this information to identify specific terms associated with your desired items. Enter these terms in the text filter box using a simple syntax, for example <code>url:word_1 text:word_2 title:word_3</code>. Alternatively, use <code>all:word</code> if you are not sure which attribute contains the word.</p>
+</li>
+<li>Right-click any item in the resource list to display an informative popup with all the available information for that item.</li>
+</ul>
+</div>
+
+
+<div class="content">
+<p class = "q"><strong>Question 4</strong>. How do I set a custom download directory?</p>
+<p><strong>Answer</strong> The resource list tab contains a <strong>directory</strong> input field. Enter a folder in the form <code>aaa/bbb/.../zzz</code>, for example <code>Docs</code> or <code>Docs/Math/Algebra</code>. Every such directory is relative to the default download directory. This is a browser extension security limitation, so you can define only subdirectories of the main download directory. You can use the general browser settings to change the location of that main directory.</p>
+<p>You can also prepare a custom list of favorite folders in the <strong>Download directories</strong> section of the extension options. Once defined, this list is available via autocomplete or by double-clicking the directory field.</p>
+</div>
+
+
+
+<div class="content">
+<p class = "q"><strong>Question 5</strong>. Why are there two <strong>add to queue</strong> buttons?</p>
+<p><strong>Answer</strong> After checking items in the resource list, you can send them either to the <strong>active queue</strong> or to the <strong>passive queue</strong> using the corresponding buttons. Sending items to the active queue means that downloading starts immediately or as soon as possible. This is the best option if you are content with the default names. Sometimes, however, it is better to rename queued items before downloading them. You can do this individually using the edit button associated with each item in the download list, or in batches using the multi-rename dialog.</p>
+</div>
+
+
+
+
+<div class="content">
+<p class = "q"><strong>Question 6</strong>. I want to download files from the resource list, but I prefer the names displayed on the original web page. How can I use them?</p>
+<p><strong>Answer</strong> By default, items in the resource list are displayed with their estimated filenames, using the <code>{name}.{ext}</code> name mask. Click the name header of the resources table to choose another attribute for display: URL, title, text, or alt text. The most obvious candidate is the <code>text</code> attribute, which usually corresponds to what you see on the web page. In this case, items are displayed with the <code>{text}.{ext}</code> name mask. Sending them to the queue preserves this displayed mask.</p>
+<p>Once items are added to the passive queue, you can rename them in more advanced ways. Select items and use the multi-rename dialog to rename them in batches. Here you can combine several types of masks and perform other batch operations, such as search and replace or setting directories.</p>
+</div>
+
+
+
+<div class="content">
+<p class = "q"><strong>Question 7</strong>. Why is the extension unable to download embedded videos?</p>
+<p><strong>Answer</strong> Simple Mass Downloader is designed for normal, direct file links. Embedded videos and streaming media use different delivery mechanisms and are outside its scope. For these resources, use a specialized video or media downloader.</p>
+</div>
+
+
+
+<div class="content">
+<p class = "q"><strong>Question 8</strong>. Why is the extension unable to download files from sites X, Y, or Z?</p>
+<p><strong>Answer</strong> The extension detects links exposed by the current page. It scans the page DOM, including accessible open shadow roots, but some sites expose resources in nonstandard ways. In other cases, the visible items are only <em>placeholder</em> links: the real URLs are generated on the fly, only after a user action. Such URLs cannot always be collected in advance.</p>
+<p>One possible solution is a helper userscript designed specifically for that site. With a userscript manager such as Tampermonkey, a knowledgeable user can expose the relevant information using the special attributes <code>data-smd-url</code> and <code>data-smd-name</code>. Simple Mass Downloader recognizes these attributes and can use them for batch downloading.</p>
+<p>Another option is to use an extension designed specifically for that site. Popular services often have specialized download extensions.</p>
+</div>
+
+
+
+<div class="content">
+<p class = "q"><strong>Question 9</strong>. Why does the extension sometimes detect only thumbnails instead of full-sized images?</p>
+<p><strong>Answer</strong> As in the previous question, the page may expose only thumbnail URLs. The full-sized image URLs may be generated dynamically or obscured by site-specific JavaScript. See the previous answer for possible solutions.</p>
+</div>
+
+
+
+<div class="content">
+<p class = "q"><strong>Question 10</strong>. I found a bug. How can I help?</p>
+<p><strong>Answer</strong> Simple Mass Downloader has many features and this Firefox version recently underwent a major internal update. Bugs and regressions are possible, especially on unusual sites or less common workflows.</p>
+<p>Detailed bug reports are very helpful. A concrete example of a troublesome page or resource URL, together with clear reproduction steps, is much more useful than a general complaint such as "the extension did not work". This makes it possible to analyze the problem and, when feasible, fix it.</p>
+</div>
+
+
+
+
+              </div>
+    
+</body>
+
+</html>
