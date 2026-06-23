@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SMD Extra Scan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        html {
+            background-color: whitesmoke;
+            font-family: Roboto;
+        }
+
+        #warnings {
+            margin-bottom: 2rem;
+            padding-top: 0;
+        }
+
+        #help {
+            padding-top: 1px;
+        }
+
+        #chrome-settings {
+            cursor: pointer;
+            color: #3F51B5;
+            font-weight: 500;
+        }
+
+        .content {
+            /* border: 1px solid lightgrey; */
+            background-color: white;
+            color: #37474F;
+            padding: 2rem;
+            max-width: 48rem;
+            align-content: center;
+
+            text-justify: inherit;
+            text-align: justify;
+            box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+            margin-bottom: 1rem;
+        }
+
+        span.note {
+            font-weight: 600;
+        }
+
+        .content.mv3 {
+            color: #01579B;
+        }
+
+        .manifest {
+            font-weight: 600;
+            color: darkred;
+        }
+
+        p,
+        div {
+            font-family: Roboto
+        }
+
+        .markdown-body {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            line-height: 1.5;
+            color: #24292e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 0.925rem;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .markdown-body strong {
+            font-weight: 500;
+        }
+
+        .markdown-body code {
+            padding: 0.2em 0.4em;
+            margin: 0;
+            /* font-size: 85%; */
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+        }
+
+        .markdown-body h3 {
+            font-size: 1.25em;
+        }
+
+        .markdown-body h4 {
+            font-size: 1em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .intro {
+            color: black;
+            font-weight: bold;
+        }
+
+        #template-1 {
+            max-width: 30rem;
+            padding: 0.25rem;
+        }
+
+        #attributes-info {
+            color: #3F51B5;
+            cursor: pointer;
+        }
+
+        .popup {
+
+            pointer-events: "visible";
+            font-size: 0.9rem;
+            overflow: hidden;
+        }
+
+        .popup.light-theme {
+            color: #203d5d;
+            box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+            background-color: whitesmoke;
+            border: 1px solid gray;
+            border-radius: unset;
+            padding: 0;
+            /*     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); */
+        }
+
+        .bordered {
+            border: 2px solid #B71C1C;
+            padding: 0.25rem;
+        }
+
+        .container {
+            height: 100%;
+            width: calc(min(48rem, 100%));
+            max-width: 62rem;
+            /* width: calc(100% - 80px); */
+            text-align: justify;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        p.q {
+            color: #3F51B5;
+            font-weight: 500;
+        }
+
+        p.q strong {
+            color: #263238;
+        }
+
+        .img-container {
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+        }
+
+        ol {
+            margin: 0 0 1.5em;
+            padding: 0;
+            counter-reset: item;
+        }
+
+        ol>li {
+            margin: 0;
+            padding: 0 0 0 2em;
+            text-indent: -2em;
+            list-style-type: none;
+            counter-increment: item;
+        }
+
+        ol>li:before {
+            display: inline-block;
+            width: 1em;
+            padding-right: 0.5em;
+            font-weight: bold;
+            text-align: right;
+            content: counter(item) ".";
+        }
+
+        .link {
+            cursor: pointer;
+            text-decoration: none;
+            color: #3F51B5;
+            font-weight: 500;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        .lidiv {
+            margin-bottom: 0.5rem;
+        }
+
+        .color {
+            color: #E91E63;
+            font-weight: 500;
+        }
+
+        td {
+            border: 1px solid gray;
+            text-align: center;
+            padding: 0.25rem;
+            font-size: 0.875rem;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: calc(50% - 30px) calc(50% - 30px);
+            column-gap: 60px;
+        }
+    </style>
+
+</head>
+
+<body class="markdown-body">
+    <main class="content">
+        <h2>Extra scan feature</h2>
+
+        <p>Extra scan can extract links from a set of HTML pages. It can be seen as a limited, but still useful, form
+            of web crawling: a one-level-deep crawler.</p>
+
+        <h3>Step 1</h3>
+        <p>First, load some HTML pages into the Resource List. In this example, the parent HTML pages contain links to
+            PDF files. The parent pages may also be local <code>.html</code>, <code>.htm</code>, or <code>.txt</code>
+            files, using the <code>file:///</code> protocol.</p>
+
+        <h3>Step 2</h3>
+
+        <p>Check the items you want to scan, then open the Extra scan dialog using the dedicated button. In this dialog,
+            you can filter the inner resources using several criteria. In this example, the target files are those with
+            the <code>pdf</code> extension. At least one criterion is required, to avoid overloading the Resource
+            List.</p>
+
+        <div class="img-container"><img src="images/extra-scan-01.png"></img></div>
+
+        <h3>Step 3</h3>
+
+        <p>Press the <code>Start</code> button. The scan starts, and the detected PDF resources are inserted into the
+            list under their corresponding parent pages.</p>
+
+        <div class="img-container"><img src="images/extra-scan-02.png"></img></div>
+
+        <h3>Step 4</h3>
+
+        <p>Usually, after the scan finishes, you will want to work only with the items found by Extra scan. To do this,
+            check <code>Show only extra scan results</code>. You can then continue filtering the list using the normal
+            Resource List filters.</p>
+
+        <div class="img-container"><img src="images/extra-scan-03.png"></img></div>
+
+        <p>For generated items, several extra name masks are available:
+            <code>{pname}, {purl}</code>,
+            <code>{ptitle}</code>,
+            <code>{palt}</code>,
+            <code>{ptext}</code> where
+            <code>{pname}</code> is the name of the parent item, and so on. You can also use
+            <code>{purl:n}</code> for parent URL parts.
+        </p>
+
+
+        <p>You can also use the keywords <code>pname</code>, <code>purl</code>, <code>ptext</code>,
+            <code>ptitle</code>, and <code>palt</code> in the <code>Text filter</code> field. For example,
+            <code>pname:abc</code> will keep only generated items whose parent item name contains the substring
+            <code>abc</code>.
+        </p>
+
+    </main>
+</body>
+
+</html>
