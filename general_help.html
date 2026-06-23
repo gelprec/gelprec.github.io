@@ -381,9 +381,8 @@
 		<h3>Favorite and recent folders</h3>
 		<p>There are some contexts where you may set a download directory (inside the resource list view or
 			<code>quick-dialog/multi-rename/edit-item</code> popups). You may explicitly enter the folder name in the
-			corresponding input text field or, sometimes more conveniently,
-			<strong>double-click</strong> this input field and select from a popup list either a recently used folder or a
-			favorite folder.
+			corresponding input text field or, sometimes more conveniently, select from the autocomplete popup either a
+			recently used folder or a favorite folder.
 			The favorite folder list can be edited on the extension's general settings page.</p>
 
 
@@ -452,7 +451,7 @@
 
 		<h3>Additional features</h3>
 		<h4>Extra scan dialog</h4>
-		<p>This feature is not exposed in the current preliminary MV3 interface. It may return in a future version.</p>
+
 		<p>When available, select some web-page resources in the list and the extension will try in the background to
 			extract
 			links from these pages according to the filtering criteria specified in
@@ -503,7 +502,8 @@
 					<code>{ptitle}</code>,
 					<code>{palt}</code>,
 					<code>{ptext}</code> where
-					<code>pname</code> is the name of the parent item and so on.</div>
+					<code>pname</code> is the name of the parent item and so on. You can also use
+					<code>{purl:n}</code> for parent URL parts.</div>
 			</li>
 			<li>
 				<div class="inner-li">In the
