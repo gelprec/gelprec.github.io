@@ -31,13 +31,17 @@
             background-color: white;
             color: #37474F;
             padding: 2rem;
-            max-width: 48rem;
+            max-width: 54rem;
             align-content: center;
 
             text-justify: inherit;
             text-align: justify;
             box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
             margin-bottom: 1rem;
+        }
+
+        code {
+            font-size: smaller;
         }
 
         span.note {
@@ -125,6 +129,11 @@
             /*     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); */
         }
 
+        .help-popover.light-theme-2 {
+            background-color: white;
+            font-size: 0.9rem;
+        }
+
         .bordered {
             border: 2px solid #B71C1C;
             padding: 0.25rem;
@@ -132,7 +141,7 @@
 
         .container {
             height: 100%;
-            width: calc(min(48rem, 100%));
+            width: calc(min(54rem, 100%));
             max-width: 62rem;
             /* width: calc(100% - 80px); */
             text-align: justify;
@@ -210,10 +219,294 @@
             margin-top: 1rem;
         }
 
+        #test-ul {
+            text-indent: 0;
+        }
+
         .grid-container {
             display: grid;
-            grid-template-columns: calc(50% - 30px) calc(50% - 30px);
-            column-gap: 60px;
+            grid-template-columns: calc(55% - 10px) calc(45% - 10px);
+            column-gap: 20px;
+        }
+
+        .grid-container-2 {
+            display: grid;
+            grid-template-columns: calc(40% - 10px) calc(60% - 10px);
+            column-gap: 20px;
+        }
+
+        .grid-container-2 p:first-child {
+            margin-top: 0;
+        }
+
+        #button-details-1 {
+            anchor-name: --anchor-1;
+        }
+
+        #button-details-2 {
+            anchor-name: --anchor-2;
+        }
+
+        #button-details-3 {
+            anchor-name: --anchor-3;
+        }
+
+        #button-details-4 {
+            anchor-name: --anchor-4;
+        }
+
+        #button-details-5 {
+            anchor-name: --anchor-5;
+        }
+
+        #button-details-6 {
+            anchor-name: --anchor-6;
+        }
+
+        #button-details-7 {
+            anchor-name: --anchor-7;
+        }
+
+        #button-details-8 {
+            anchor-name: --anchor-8;
+        }
+
+        #button-details-9 {
+            anchor-name: --anchor-9;
+        }
+
+        #button-details-10 {
+            anchor-name: --anchor-10;
+        }
+
+        #button-details-11 {
+            anchor-name: --anchor-11;
+        }
+
+        #button-details-12 {
+            anchor-name: --anchor-12;
+        }
+
+        #button-details-13 {
+            anchor-name: --anchor-13;
+        }
+
+        #button-details-14 {
+            anchor-name: --anchor-14;
+        }
+
+        #button-details-15 {
+            anchor-name: --anchor-15;
+        }
+
+        #button-details-16 {
+            anchor-name: --anchor-16;
+        }
+
+        #button-details-17 {
+            anchor-name: --anchor-17;
+        }
+
+        #button-details-18 {
+            anchor-name: --anchor-18;
+        }
+
+        #button-details-19 {
+            anchor-name: --anchor-19;
+        }
+
+        #button-details-20 {
+            anchor-name: --anchor-20;
+        }
+
+        #button-details-21 {
+            anchor-name: --anchor-21;
+        }
+
+        #button-details-22 {
+            anchor-name: --anchor-22;
+        }
+
+        #button-details-23 {
+            anchor-name: --anchor-23;
+        }
+
+        #button-details-24 {
+            anchor-name: --anchor-24;
+        }
+
+        .details-link {
+            border: 0;
+            padding: 0;
+            background: none;
+            color: inherit;
+            font: inherit;
+            font-weight: 700;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .help-popover {
+            position: fixed;
+            inset: auto;
+            top: anchor(bottom);
+            left: anchor(left);
+            max-width: min(36rem, calc(100vw - 2rem));
+            margin: 0;
+            margin-top: 0.5rem;
+            padding: 0.85rem 1rem;
+            border: 1px solid #B0BEC5;
+            background: white;
+            color: #263238;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .help-popover.bottom {
+            top: anchor(bottom);
+            bottom: auto;
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+
+        .help-popover.top {
+            top: auto;
+            bottom: anchor(top);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .help-popover.left {
+            left: anchor(left);
+            right: auto;
+            translate: 0 0;
+        }
+
+        .help-popover.center {
+            left: anchor(center);
+            right: auto;
+            translate: -50% 0;
+        }
+
+        .help-popover.right {
+            left: anchor(right);
+            right: auto;
+            translate: -100% 0;
+        }
+
+        .help-popover::backdrop {
+            background: transparent;
+        }
+
+        .popable-container {
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .popable {
+            background-color: #E8F5E9;
+            border-radius: 3px;
+            padding: 0 4px;
+            box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+            text-decoration: none;
+            font-weight: 400;
+            height: 18px;
+            /* vertical-align: middle; */
+            line-height: 18px;
+            color: #37474F;
+        }
+
+        .light-theme {
+            color: #37474F;
+            box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+            background-color: whitesmoke;
+            border: 1px solid gray;
+            border-radius: unset;
+            padding: 8px;
+            font-size: 0.9rem;
+            /*     box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); */
+        }
+
+        .light-theme strong {
+            color: #01579B;
+        }
+
+        #minimal-workflow {
+            margin-top: 4px;
+            border-radius: 3px;
+            border: 1px solid goldenrod;
+            background-color: #FFFDE7;
+            padding-left: 4px;
+        }
+
+        .accordion {
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .accordion-item {
+            border: 1px solid #CFD8DC;
+            background-color: #FAFAFA;
+        }
+
+        .accordion-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 0.75rem;
+            cursor: pointer;
+            color: #263238;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .accordion-title::-webkit-details-marker {
+            display: none;
+        }
+
+        .accordion-title::marker {
+            content: "";
+        }
+
+        .accordion-symbol {
+            width: 1.25rem;
+            height: 1.25rem;
+            flex: 0 0 1.25rem;
+            background-image: url("images2/chevron_forward.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 1.25rem 1.25rem;
+        }
+
+        .accordion-item[open] .accordion-symbol {
+            background-image: url("images2/keyboard_arrow_down.svg");
+        }
+
+        .accordion-body {
+            padding: 0 0.75rem 0.75rem 2.25rem;
+            color: #455A64;
+            text-align: left;
+        }
+
+        .justify {
+            text-justify: inter-character;
+            text-align: justify;
+        }
+
+        ul.compact,
+        ol.compact {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        #details-2 table tr td:first-child {
+            color: #01579B;
+            font-weight: 500;
+        }
+
+        #details-2 table {
+            border-collapse: collapse;
         }
     </style>
 
@@ -222,396 +515,770 @@
 <body class="markdown-body">
     <div class="container">
         <div class="content mv3">
-            <span class="note">Important note</span>: <span>Simple Mass Downloader</span> has been migrated to <span
-                class="manifest">Chrome Manifest V3</span>, as required by the current Chrome extension platform. Most
-            features should work as before, but this release includes major internal changes. If you notice anything
-            unusual, please report the issue with reproduction steps.
+            <strong>Simple Mass Downloader</strong> uses a <strong class="manifest">popup</strong> as its main
+            interface. For quick access, <strong class="manifest">pin the extension to the Chrome toolbar.</strong> For
+            this, you must first locate
+            the general chrome extensions button <img src="images2/extensions.png"
+                style="vertical-align: bottom;max-height: 20px;"> in the toolbar and follow
+
+
+            <button id="button-details-1" class="details-link popable" type="button" popovertarget="details-1">these
+                steps.
+            </button>
+
+
+            Now you can open
+            the popup at any time by clicking its toolbar icon <img src="images2/click-to-pin-3.png"
+                style="display: inline-block;max-width: 220px;height: 28px;vertical-align: bottom;">
+
+            <!-- <p>
+<button id="button-details-1b"
+                    class="details-link" type="button">these steps</button>
+
+</p> -->
+
         </div>
 
-
-
         <div class="content">
-            <h1>Quick Start Tutorial</h1>
+            <h2>Quick Start Tutorial</h2>
+            <p>Simple Mass Downloader is especially useful when mass downloading requires careful identification of
+                resources on a web page, using appropriate filtering, as well as suitable file names and destination
+                folders.</p>
+            <p>Unlike an external download manager, SMD can use contextual information from <button
+                    id="button-details-2" class="details-link popable" type="button" popovertarget="details-2">link
+                    attributes
+                </button>. These attributes can be used for both filtering and constructing suitable names for
+                downloaded files or destination folders, through <button id="button-details-4"
+                    class="details-link popable" type="button" popovertarget="details-4">name masks.</button></p>
+            <p style="background-color: #FFFDE7;padding: 4px;">Note that destination folders are relative to Chrome’s
+                main <code>Downloads</code> folder. <em>For security
+                    reasons, Chrome extensions cannot choose an arbitrary folder path for mass downloads</em>. For
+                example,
+                <code>math/algebra</code> means <code>Downloads/math/algebra</code>.
+            </p>
 
-            <p>Simple Mass Downloader uses a popup as its main interface. For quick access, pin the extension to the
-                Chrome
-                toolbar:</p>
+            <strong>There are two main workflows:</strong> the basic and popup workflow
 
+            <h3>The basic workflow</h3>
             <div class="grid-container">
-
                 <div>
-                    <img src="images/click-to-pin.png" style="vertical-align: bottom;max-height: 220px;">
+                    <p style="margin-top:0">The simpler workflow uses a mini dialog opened by the standard <em>context
+                            menu</em> on the web page. You can
+                        use it for
+                    <ul>
+                        <li>the whole
+                            page</li>
+                        <li>an individual link or image</li>
+                        <li>a selected range of text containing links</li>
+                    </ul>
+                    </p>
+                    <p>Here you check the desired file types, set optionally a destination folder and finally click the
+                        <code>Download now</code> button
+                    </p>
+                    <p>Note that there is an <button id="button-details-3" class="details-link popable" type="button"
+                            popovertarget="details-3">extended mode
+                        </button> of this <code>Quick download dialog</code> with more options (filtering, name masking
+                        etc.)</p>
                 </div>
-                <div>
+                <div><img src="images2/quick.png" style="width: stretch;border: 1px solid gray;"></div>
+
+            </div>
+
+            <h3>The main popup workflow</h3>
+
+            <div>The more flexible workflow uses <em style="font-weight:500;">the extension popup</em> (click <img
+                    src="favicon.png" style="max-width: 1rem;"> in the browser
+                toolbar to open it).</div>
+            <div>It has two main panels: <strong>Resource list</strong> (with a <em>list view</em> and a <em>thumbnails
+                    view</em>) and <strong>Download list</strong>.</div>
+            <p>The main advantage over the <strong>Quick Download Dialog</strong> is that each item’s associated
+                information is visible. A full <button id="button-details-5" class="details-link popable" type="button"
+                    popovertarget="details-5">info popup</button> is available with <code>right-click</code> in the
+                <strong>Resource List</strong>, or <code>Ctrl+right-click</code> in the <strong>Download List</strong>.
+            </p>
+            <div id="minimal-workflow">
+                <div style="margin-top:6px">
+                    The typical workflow involves only three steps:</div>
+                <ol style="margin-top:6px">
+                    <li>Click the <img src="images2/load-links.png" style="height: 22px;border: 1px solid gray;"> button
+                        <strong>to load all the
+                            links/resources from the current tab </strong>
+                    </li>
+                    <li>Select/check from the generated resources list the desired ones</li>
+                    <li>Click <img src="images2/download-now.png" style="height: 20px;"> to download them immediately or
+                        <img src="images2/download-add.png" style="height: 20px;"> to add them to the delayed download
+                        queue
+                    </li>
+                </ol>
+            </div>
+
+            <h4>The resource list</h4>
+
+            <div class="grid-container-2">
+                <div>Sometimes the minimal workflow above is not enough. Most often, you need to filter the detected
+                    resources first, in order to isolate exactly the items you want.
+
+                    Filtering can be done by:
+                    <ul>
+                        <li><button id="button-details-6" class="details-link popable" type="button"
+                                popovertarget="details-6">extension filter</button> </li>
+                        <li><button id="button-details-7" class="details-link popable" type="button"
+                                popovertarget="details-7">text filter</button></li>
+                        <li><button id="button-details-8" class="details-link popable" type="button"
+                                popovertarget="details-8">category filter</button> (using default and <button
+                                id="button-details-9" class="details-link popable" type="button"
+                                popovertarget="details-9">custom categories</button>)</li>
+                    </ul>
+
+
+                    <p>Other optional but useful steps:</p>
                     <ol>
                         <li>
-                            Click the Extensions button in the toolbar.
+                            Set a <button id="button-details-10" class="details-link popable" type="button"
+                                popovertarget="details-10">destination folder</button>. The <strong>directory
+                                field</strong> has an <button id="button-details-11" class="details-link popable"
+                                type="button" popovertarget="details-11">autocomplete popup</button> with recently used
+                            folders
+                            and, optionally, user-defined <button id="button-details-12" class="details-link popable"
+                                type="button" popovertarget="details-12">favorite folders</button>.
                         </li>
                         <li>
-                            Find Simple Mass Downloader in the list.
-                        </li>
-                        <li>
-                            Click the pin icon next to its name.
+                            Set a <button id="button-details-13" class="details-link popable" type="button"
+                                popovertarget="details-13">name mask</button> for all selected/checked files. In the
+                            example on the left, the name mask <code>{text}.{ext}</code> is preferred because it creates
+                            more descriptive names. For example, the first item becomes
+                            <code>Finite geometry and coding theory.pdf</code>, while the default <code>{auto}</code>,
+                            usually equivalent to <code>{name}.{ext}</code>, would produce <code>fgct.pdf</code>.
                         </li>
                     </ol>
-                    <p>You can then open the downloader at any time by clicking its toolbar icon.</p>
+
+
+                </div>
+                <div>
+                    <div><img src="images2/list.avif" style="width: stretch;border: 1px solid gray;"></div>
                     <div>
-                        <img src="images/click-to-pin-2.png" style="vertical-align: bottom;max-width: 220px;">
+                        <p style="margin-top: 0.5rem;">Besides the <strong>list view</strong> shown above, there is also
+                            a <button id="button-details-14" class="details-link popable" type="button"
+                                popovertarget="details-14">thumbnail view</button> for images, with specific
+                            <code>width/height</code>
+                            filters and a button to sort by descending size.
+                        </p>
                     </div>
+
                 </div>
+
             </div>
 
-            <h4>There are two main workflows:</h4>
+            <h4>The download list</h4>
 
-            <ol>
-                <li>
-                    The simpler workflow uses the standard context menu on the web page. You can use it for the whole
-                    page,
-                    for an individual link or image, or for a selected range of text containing links. See <a
-                        href="#basic-usage" class="link">Basic usage</a>
-                    below.
-                </li>
-                <li>
-                    The more flexible workflow uses <em style="text-decoration: underline;">the extension popup</em>, opened from the extension button <img
-                        src="favicon.png" style="max-width: 1rem;"> in the browser
-                    toolbar. The popup has two main panels: <strong>Resource list</strong> and <strong>Download list</strong>. Use the first panel to <em style="text-decoration: underline;">load the
-                        links</em> from the current page, to select the items you
-                    want and finally to <em style="text-decoration: underline;">send them</em> to the
-                    <strong>Download List</strong>.
+            <div class="grid-container-2">
+                <div>
+                    <p>As noted earlier, items can be sent to the Download List either with
+                        <img src="images2/download-now.png" style="height: 20px;"> to start downloading immediately, or
+                        with
+                        <img src="images2/download-add.png" style="height: 20px;"> to add them to the delayed download
+                        queue.
+                    </p>
 
                     <p>
-                        <img src="images/image-35.png" style="padding-left:60px; vertical-align: bottom;max-width: calc(100% - 60px);">
+                        The first option is usually preferred, but the delayed queue is useful when you need to refine
+                        items at the Download List level before starting them. There you can use the <button
+                            id="button-details-15" class="details-link popable" type="button"
+                            popovertarget="details-15">multirename dialog</button>
+                        for more advanced batch actions, including name masks, search-and-replace rules, and preview
+                        changes. Unstarted items can also be reordered with <code>Ctrl + Up/Down</code>, which is
+                        especially useful when using counter masks.
                     </p>
 
-                    This workflow supports
-                    advanced
-                    filtering, renaming, and download options. See <a href="#main-workflow" class="link">A more
-                        flexible workflow</a>
-                    below.
-                </li>
-            </ol>
-
-            <table>
-                <tr>
-                    <td><a href="#basic-usage" class="link">Basic usage</a></td>
-                    <td><a href="#main-workflow" class="link">A more flexible workflow</a></td>
-                    <td><a href="#multirename" class="link">Download list panel</a></td>
-                    <td><a href="#tips" class="link">Some random tips</a></td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="content">
-            <div class="chrome" style="list-style: none; margin-top:1.5rem;">
-                <div class="inner-li" style='padding: 0 0.5rem;'>
-                    <strong>Important note: </strong>please verify in your <a id="smd-gelprec-chrome-settings"
-                        class="link">Chrome
-                        Download Settings</a> that the following option is <strong style="color: #B71C1C;">NOT
-                        checked</strong>:
-
-                    <p style="text-align: center;">
-                        <img src="images/ask-where.png" style="max-width: 450px;border: 1px solid gray;">
-                    </p>
-                    Otherwise, for <strong
-                        style="color: #B71C1C;">every item</strong> in the download queue <strong
-                        style="color: #B71C1C;">&nbsp;you will be prompted to choose a
-                        file name or directory&nbsp;</strong> via a
-                    <strong>Save As</strong> dialog. Imagine what that means for a list of 500 downloads or more.
                     <p>
-                        Note: if the settings link does not open directly, copy and paste the following URL into your
-                        address bar:
-                        <code>chrome://settings/?search=ask+where</code>
+                        You can also make finer adjustments for individual items using the
+                        <img src="images2/edit-dialog.png" style="height: 20px;"> <button id="button-details-16"
+                            class="details-link popable" type="button" popovertarget="details-16">edit dialog</button>.
                     </p>
 
+                    <p>
+                        The Download List also provides the usual download management actions: start items individually
+                        or in groups, pause, resume, cancel, or remove them.
+                    </p>
+
+
+
                 </div>
-            </div>
-        </div>
+                <div><img src="images2/download-list.png" style="width: stretch;border: 1px solid gray;"></div>
 
-        <div class="content" id="basic-usage">
-            <h2>Basic usage</h2>
-            <div>
-                Go to a web page, right-click it, and choose <img src="images/image-20.png"></img>. This will show a
-                <strong>quick download dialog</strong>:
-                <div class="img-container"><img src="images/image-21.png"></img></div>
-                Check the desired file types (PDFs in this example), optionally choose a download directory
-                defined as a subfolder of Chrome's main Downloads directory, and finally click the <strong>Download
-                    now</strong> button.
-                <p>
-                    The files start downloading and, if all goes well, you will find them in the
-                    <code>Downloads/Algebra</code> subfolder. <br><strong style="color:#E91E63">That's all!</strong>
-                </p>
-                <hr>
-                <p><strong>Tip:</strong> If you make a <strong>text selection on the web page</strong>, the extension
-                    will try to include only the links from that selection
-                    (the context menu will also include the option <img src="images/image-20b.png"
-                        style="vertical-align: bottom;"></img>)</p>
-                <p>This minimal workflow <strong>lacks advanced filtering/renaming options</strong> but may be
-                    appropriate in
-                    many situations.</p>
-
-
-            </div>
-        </div>
-
-        <div class="content" id="main-workflow">
-            <h2>A more flexible workflow</h2>
-
-            <p>Say, for example, that you visit a mathematics lecture-notes site with many PDF resources
-                and you need to download only the resources that include the term <strong class="color">"group"</strong>
-                inside their
-                link text, as displayed on the page:
-
-            </p>
-            <div class="img-container"><img src="images/image-30.png"></img></div>
-            <div>The typical Simple Mass Downloader popup window will look like this:
-
-                <div class="img-container"><img src="images/image-31.png"></img></div>
-            </div>
-            <p><strong>The steps explained:</strong></p>
-            <ul>
-                <li>
-                    <div class="lidiv"><span class="color">First step:</span> you press the <strong>Load page
-                            links</strong> button. This usually fills
-                        the resource list with all sorts of links, not only the desired PDFs.</div>
-                </li>
-                <li>
-                    <div class="lidiv"><span class="color">Second step</span>: you have to filter this list, such that
-                        only the desired links remain
-                        here.
-                        Start filtering by entering <code>pdf</code>
-                        in the extensions field (or <code>pdf epub doc</code> if you want several types), then enter
-                        <code>group</code> in the Text filter box.
-                    </div>
-                    <!--                     <div class="lidiv"> Note that, by default, the items on
-                        the resource list shows with their "natural" filenames and these filenames look sometimes very
-                        different from the text links as visible on the page.
-                        But, if you write in the textfilter field the desired term <strong>group</strong>, the addon is
-                        smart enough to filter only those items with term <strong>group</strong> in their text
-                        attribute.
-                    </div> -->
-                    <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">You have now
-                        isolated all the desired PDFs. Next, check all
-                        items <strong>at once</strong> (using the top master checkbox) or only <strong>a range</strong>
-                        (using
-                        <code>shift + click</code>).
-                    </div>
-                </li>
-                <li>
-                    <div class="lidiv"><span class="color">Third step</span>: setting a custom download directory.</div>
-                    <div class="lidiv"> By default, all downloaded files go to Chrome's main download directory <img
-                            src="images/image-12.png"></img> (usually named <strong>Downloads</strong>)</div>
-
-                    <div class="lidiv">
-                        The extension cannot set folders outside this main download directory due to a browser extension
-                        security limitation. However, it can set <strong>subfolders</strong>
-                        inside
-                        it.
-                    </div>
-                    <div class="lidiv">So you write <code>Algebra/Groups</code> in the dedicated directory field. Now
-                        all downloaded files will go
-                        specifically to the <code>Downloads/Algebra/Groups </code> subfolder.</div>
-                </li>
-                <li>
-                    <div class="lidiv"><span class="color">Fourth step</span>: setting a custom name mask.</div>
-                    <div class="lidiv"> All files have a default filename.
-                        For example, the highlighted item from the screenshot above will get the name
-                        <code>MIT18_703S13_pra_l_1.pdf</code>.
-                        It is often better to use the link text displayed on the web page as the filename.
-                        For this, use the name mask <code>{text}.{ext}</code>.
-                    </div>
-                    <div class="lidiv">
-                        The same item will now get the more descriptive name <code>The alternating groups (PDF)</code>
-                        (at least for mathematicians).
-                        This mask is useful enough to have a dedicated button, but many other masks are also available.
-                        Click the corresponding help button for details.
-                        <div class="img-container"><img src="images/image-33b.png"></img></div>
-
-
-                    </div>
-                </li>
-
-                <li>
-                    <div class="lidiv"><span class="color">Last step</span>: click the <strong>Download now</strong>
-                        button <img src="images/image-17a.png"></img> to start downloading the checked items
-                        <strong>immediately</strong>. Alternatively, send the items to the queue by clicking the other
-                        button
-                        <img src="images/image-17b.png"></img>, then select them for downloading later.
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-
-
-        <div class="content" id="downloadlist">
-            <h2>Download list panel</h2>
-
-            <p>
-
-
-                Here you can perform the usual download management operations: start items individually or in groups,
-                pause, resume, cancel, or remove items.
-
-
-
-            </p>
-            <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">There is a
-                <code>Select all</code> button. You can also select a range
-                of items using <code>shift + click</code>, or select items <strong>individually</strong> using
-                <code>ctrl + click</code>.
             </div>
             <p>
-                The inactive items from the queue <strong>can still be edited before downloading</strong>, either
-                individually (using the corresponding <img src="images/image-34.png"></img> button) or as a group using
-                the <strong>multi-rename dialog</strong>. Selected inactive items can be moved up or down using
-                <code>ctrl + up/down arrow keys</code>.
-                This can be useful when using counter masks, for example.
-
+                A special note about <code>Sequential mode</code>: this is a global setting. When enabled, queued
+                downloads start one by one, with a customizable interval between them (default: 3 seconds). This reduces
+                pressure on the server and can help prevent stalls.
             </p>
 
-            <div class="lidiv">The multi-rename dialog is a more advanced version of the simple name mask dialog from
-                the resource list panel, with search-and-replace and preview functionality.</div>
 
-            <div>Finally, select the desired items and click the <strong>Start selected</strong> button. A finished item
-                looks like:
-                <div class="img-container"><img src="images/image-32.png"></img></div>
-                You can open the file directly by clicking its name, or open the directory where it was downloaded
-                using the corresponding folder icon.
-            </div>
+
+
+
+
+
+
         </div>
 
 
-        <div class="content" id="multirename" style="display:none;">
-            <h2>Batch renaming</h2>
+        <div id="compact-info" class="content">
+            <div class="accordion">
+                <details class="accordion-item">
+                    <summary class="accordion-title">
+                        <span class="accordion-symbol" aria-hidden="true"></span>
+                        <span>Some random tips</span>
+                    </summary>
+                    <div class="accordion-body">
+                        <ol>
+                            <li>This <strong>quick start</strong> is always available from the extension’s <img
+                                    src="images2/header-help.png" style="height: 20px;"> help menu. This menu also
+                                includes a last-resort <strong>Reload extension</strong> command.
+                            </li>
+                            <li>
+                                Those items from the resource list that are also on the download list use a distinctive
+                                color
+                                for their checkboxes (<img src="images2/image-22a.png"></img> or <img
+                                    src="images2/image-22b.png"></img>)
+                                and cannot be sent to the download list again unless they are first removed from it. In
+                                general, you
+                                should not worry about sending the same file multiple times to the
+                                download list.
+                            </li>
+                            <li> The extension remembers whether items were downloaded in the current session or recent
+                                history and
+                                displays them in the resource list using green text.
+                                <div class="img-container"><img src="images2/image-23.png"></img></div>You can remove
+                                these items
+                                using the <code>Remove already downloaded</code> command from the hamburger menu.
+                            </li>
 
-            <div>
-                Sometimes, it is better to rename items in batches before downloading. In this
-                case, click <strong style="color:#3F51B5;">the other button</strong>
-                <img src="images/image-17b.png"></img>. This <strong>will simply add</strong> the checked items to the
-                (passive) download list, with their <strong>default filenames</strong>:
-                <div class="img-container"><img src="images/image-18.png"></img></div>
+                            <li>
+                                You can adjust the extension popup <strong>width</strong> using the button <img
+                                    src="images2/header-resize.png" style="height: 20px;"></li>
+                            <li>
+                                There are some hotkeys available:
 
-                Of course, you can start individual items or edit their name or directory using the corresponding
-                buttons.
-                <div class="img-container"><img src="images/image-11.png"></img></div>
-                <div class="lidiv">Usually, it is better to rename the <strong>selected items</strong> in batches using
-                    the <strong>name masks</strong> from the <strong>
-                        multi-rename dialog</strong>.</div>
-                <div class="lidiv" style="color: #3F51B5;border: 1px solid #3F51B5;padding: 3px;">There is a
-                    <code>Select all</code> button. You can also select a range
-                    of items using <code>shift + click</code>, or select items <strong>individually</strong> using
-                    <code>ctrl + click</code>.
-                </div>
-                <div class="img-container"><img src="images/image-19.png"></img></div>
-                <div class="lidiv">Using appropriate name masks, the items get <span class="color">much better
-                        names</span>. Here we have used the <code>{text}</code> mask and the
-                    <code>{cc...}</code> counter type mask,
-                    but many other masks are available. Click the corresponding <img src="images/image-8.png"></img>
-                    for more details (this help button is visible only when the name masks field is focused).
-                </div>
+                                <ul id="test-ul">
+                                    <li>
+                                        <code>Ctrl + V</code> for paste/import from the clipboard (in both the
+                                        Resource
+                                        List and
+                                        Download List panels)
+                                    </li>
+                                    <li>
+                                        <code>Ctrl + A</code> to select all items (in the Download List panel)
+                                    </li>
+                                    <li>
+                                        <code>Ctrl + Up/Down</code> to move selected inactive items (in the Download
+                                        List panel)
+                                    </li>
+                                    <li><code>Shift + click</code> to select a range of items on
+                                        both resources and download list</li>
+                                </ul>
 
 
+                            </li>
+                            <li>
+                                The number of items per page may be set individually for the
+                                resource list, thumbnails
+                                grid, and download list. For example
+                                <code>200, 50, 50</code> instead of the default
+                                <code>200</code> (equivalent to
+                                <code>200, 200, 200</code>)
 
+                            </li>
+                            <!-- <li>There are many more advanced features of extensions, more or less experimental. For example</li> -->
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary class="accordion-title">
+                        <span class="accordion-symbol" aria-hidden="true"></span>
+                        <span>More advanced usage</span>
+                    </summary>
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                Links can be <strong>imported</strong> from the <em>clipboard</em> or a <em>text
+                                    file</em>, or
+                                generated using
+                                a
+                                <button id="button-details-18" class="details-link popable" type="button"
+                                    popovertarget="details-18">Pattern URL dialog
+                                </button>.
+                                <br>Also, the links can be <strong>exported</strong> to <em>clipboard</em> or a <em>text
+                                    file</em> using a <button id="button-details-19" class="details-link popable"
+                                    type="button" popovertarget="details-19">flexible mask system
+                                </button> (this
+                                can be
+                                useful if you want to use the generated list with an external file downloader).
+                                See the <img src="images2/image-27.png" style="vertical-align: bottom;"></img> <button
+                                    id="button-details-20" class="details-link popable" type="button"
+                                    popovertarget="details-20">menu button
+                                </button>.
+                            </li>
+
+                            <li>
+                                The extension has a built-in routing system (see the <strong>Automatic Folders</strong>
+                                section
+                                in
+                                the settings dialog). Here you can define custom folders where downloads can be
+                                automatically directed based on user-defined rules. See <a
+                                    href="./automatic_folders.html" target="_blank">here</a> for more details.
+                            </li>
+
+                            <li>The extension has a <button id="button-details-17" class="details-link popable"
+                                    type="button" popovertarget="details-17">tabs dialog
+                                </button> where you select tabs (active
+                                tab, all tabs, left or right tabs) and optionally filters page items by various
+                                criteria.
+                                Finally, the found links are added to the resource list and are ready for further
+                                operations
+                                (see the
+                                <img src="images2/image-26.png" style="vertical-align: bottom;"></img> button).
+                            </li>
+                            <li>
+                                There is also an experimental <button id="button-details-21"
+                                    class="details-link popable" type="button" popovertarget="details-21">extra scan
+                                    dialog
+                                </button>. When available (this must be enabled in general settings), select some
+                                web-page
+                                resources in the list and the extension will try in the background to extract links from
+                                these pages according to the filtering criteria specified in <strong>Extra Scan</strong>
+                                dialog. Finally,
+                                the found links are inserted in the resource list below their "parent" item and are
+                                ready for further actions. More details <a href="./extra_scan.html"
+                                    target="_blank">here</a>.
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary class="accordion-title">
+                        <span class="accordion-symbol" aria-hidden="true"></span>
+                        <span>Some gotchas</span>
+                    </summary>
+                    <div class="accordion-body">
+                        <ol>
+                            <li style="text-indent: -1.5em;">Please verify in your <a id="smd-gelprec-chrome-settings"
+                                    class="link">Chrome
+                                    Download Settings</a> that the following option is <strong
+                                    style="color: #B71C1C;">NOT
+                                    checked</strong>:
+
+                                <p style="text-align: center;">
+                                    <img src="images/ask-where.png" style="max-width: 450px;border: 1px solid gray;">
+                                </p>
+                                Otherwise, for <strong style="color: #B71C1C;">every item</strong> in the
+                                download queue <strong style="color: #B71C1C;">&nbsp;you will be prompted to
+                                    choose a
+                                    file name or directory&nbsp;</strong> via a
+                                <strong>Save As</strong> dialog. Imagine what that means for a list of 500
+                                downloads or more.
+                                <br><br>
+                                <strong>Note:</strong> if the settings link does not open directly, copy and paste the
+                                following URL into your
+                                address bar:
+                                <code>chrome://settings/?search=ask+where</code>
+
+
+
+                            </li>
+                            <li style="text-indent: -1.5em;"><strong>Question:</strong> Why is the extension unable to
+                                download embedded videos?
+                                <br>
+                                <strong>Answer:</strong> Simple Mass Downloader is designed for normal, direct file
+                                links. Embedded videos and streaming media use different delivery mechanisms and are
+                                outside its scope. For these resources, use a specialized video or media downloader.
+                            </li>
+                            <li style="text-indent: -1.5em;"><strong>Question:</strong> Why is the extension unable to download files from sites X, Y, or Z??
+                                <br>
+                                <strong>Answer:</strong> The extension detects links exposed by the current page. It scans the page DOM, including accessible open shadow roots, but some sites expose resources in nonstandard ways. In other cases, the visible items are only <em>placeholder</em> links: the real URLs are generated on the fly, only after a user action. Such URLs cannot always be collected in advance.
+                            </li>
+                        </ol>
+                    </div>
+                </details>
             </div>
-            <div>Finally, select the desired items and click the <strong>Start selected</strong> button. A finished item
-                looks like:
-                <div class="img-container"><img src="images/image-32.png"></img></div>
-                You can open the file directly by clicking its name, or open the directory where it was downloaded
-                using the corresponding folder icon.
-            </div>
-        </div>
 
-        <div class="content" id="tips">
-            <h2>Some random tips</h2>
-
-            <ol>
-                <li>
-                    Those items from the resource list that are also on the download list use a distinctive color
-                    for their checkboxes (<img src="images/image-22a.png"></img> or <img
-                        src="images/image-22b.png"></img>)
-                    and cannot be sent to the download list again unless they are first removed from it. In general, you
-                    should not worry about sending the same file multiple times to the
-                    download list.
-                </li>
-                <li> The extension remembers whether items were downloaded in the current session or recent history and
-                    displays them in the resource list using green text.
-                    <div class="img-container"><img src="images/image-23.png"></img></div>You can remove these items
-                    using the <code>Remove already downloaded</code> command from the hamburger menu.
-                </li>
-
-                <li>
-                    You can view all the attributes and information available for an individual item in the
-                    resource list by right-clicking it.
-                    This opens an informative popup with all the attributes available for that item (
-                    <code>URL/title/text</code>, etc.), including a thumbnail view for image items
-                    (see the image above for an example).
-                </li>
-                <!--                     <li>
-                        On the download list the user can move up/down a group of selected items by using
-                        <code>ctrl + up/down arrow keys</code>. This can be useful when using contor masks, for example.
-                    </li> -->
-                <li>
-                    You can adjust the extension popup <strong>width</strong> using the button <img
-                        src="images/image-24.png"></img></li>
-                <li>
-                    There are some hotkeys available:
-                    <ul>
-                        <li>
-                            <code>Ctrl + V</code> for paste/import from the clipboard (in both the Resource List and
-                            Download List panels)
-                        </li>
-                        <li>
-                            <code>Ctrl + A</code> to select all items (in the Download List panel)
-                        </li>
-                        <li>
-                            <code>Ctrl + Up/Down</code> to move selected inactive items (in the Download List panel)
-                        </li>
-                    </ul>
-                </li>
-                <!-- <li>There are many more advanced features of extensions, more or less experimental. For example</li> -->
-            </ol>
-        </div>
-
-        <div class="content" id="next">
-            <h2>What's next</h2>
-
-            <div>
-                There are many other features. For example:
-                <ul>
-                    <li>
-                        Links can be <strong>imported</strong> from the clipboard, from a text file, or generated using
-                        a
-                        <code>Pattern URL</code> dialog.
-                        <br>Also, the links can be <strong>exported</strong> using a flexible mask system (this can be
-                        useful if you want to use the generated list with an external file downloader).
-                        See the <img src="images/image-27.png" style="vertical-align: bottom;"></img> menu button.
-                    </li>
-                    <li>
-                        You can create complex filters and save them as custom categories (see the <strong>Custom
-                            Categories</strong> section in the settings dialog).
-                    </li>
-                    <li>
-                        The extension has a built-in routing system (see the <strong>Automatic Folders</strong> section
-                        in
-                        the settings dialog). Here you can define custom folders where downloads can be
-                        automatically directed based on user-defined rules.
-                    </li>
-                    <li>For images, there is also a special <strong>thumbnails view</strong> where items may be filtered
-                        by size or sorted in descending order by size.</li>
-                    <li>The extension has a <strong>tabs dialog</strong> where you select tabs (active
-                        tab, all tabs, left or right tabs) and optionally filters page items by various criteria.
-                        Finally, the found links are added to the resource list and are ready for further operations
-                        (see the
-                        <img src="images/image-26.png" style="vertical-align: bottom;"></img> button).
-                    </li>
-                </ul>
-
-
-
-            </div>
         </div>
 
     </div>
+
+    <div id="details-1" class="help-popover bottom center" popover style="position-anchor: --anchor-1;">
+        <div>
+
+
+            <div>
+                <ol>
+                    <li>
+                        Click the Extensions button in the toolbar.
+                    </li>
+                    <li>
+                        Find Simple Mass Downloader in the list.
+                    </li>
+                    <li>
+                        Click the pin icon next to its name.
+                    </li>
+                </ol>
+            </div>
+
+            <div>
+                <img src="images2/click-to-pin.png" style="vertical-align: bottom;max-height: 220px;">
+            </div>
+        </div>
+    </div>
+
+    <div id="details-2" class="help-popover bottom center light-theme" popover style="position-anchor: --anchor-2;">
+        <div>
+            <div style="margin-bottom:6px; color:rgb(5, 84, 130);font-weight:500;">Typically, any downloadable resource
+                has attributes like the ones below:</div>
+
+            <!--             <div>
+                <strong>URL</strong>: visible in the status bar when you hover over the link. The last part of the URL
+                usually provides the default name for the downloaded file. For example <code>https://www.example.com/aaa/bbb/name.pdf</code>
+            </div>
+            <div>
+                <strong>text</strong>: the visible link text, as it appears on the page
+            </div>
+            <div>
+                <strong>alt</strong>: the alternative text, usually hidden and associated with images
+            </div>
+            <div>
+                <strong>title</strong>: additional information that appears when you hover over the link
+            </div> -->
+
+            <table>
+                <tr>
+                    <td>URL</td>
+                    <td>visible in the status bar when you hover over the link. The last part of the URL
+                        usually provides the default name and extension for the downloaded file. For example
+                        <code>https://www.example.com/aaa/bbb/name.pdf</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>the visible link text, as it appears on the page</td>
+                </tr>
+                <tr>
+                    <td>alt</td>
+                    <td>the alternative text, usually hidden and associated with images</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>additional information that appears when you hover over the link</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="details-3" class="help-popover top center light-theme" popover
+        style="position-anchor: --anchor-3;max-width: 375px;">
+        <div style="margin-bottom:0.5rem; font-weight: 500; color:#263238;">The extended version provides additional
+            options:</div>
+        <div>
+            <img src="images2/quick-extended.png"
+                style="vertical-align: bottom;max-width: 375px;border: 1px solid gray;">
+        </div>
+
+
+        <ul>
+            <li>You can filter items by text or by category, including user-defined categories.</li>
+            <li>You can set a name mask.</li>
+            <li>You can select or deselect all items at once.</li>
+            <li>You can enable a “gentle” download mode: for each server, items are downloaded one by one, using the
+                interval set by the user. This reduces pressure on the server and can help prevent stalls.</li>
+        </ul>
+    </div>
+
+    <div id="details-4" class="help-popover bottom center light-theme" popover style="position-anchor: --anchor-4;">
+        This is an advanced feature and can be skipped at first. These masks can be used in the following contexts:
+        <ul class="compact">
+            <li>naming downloadable items</li>
+            <li>naming destination folders</li>
+            <li>exporting item metadata to a text file</li>
+        </ul>
+
+        Masks can use several sources:
+        <ul class="compact">
+            <li>
+                <div>the link attributes of a downloadable resource</div>
+                <div>for example: <code>{text}</code>, <code>{title}</code></div>
+            </li>
+            <li>
+                <div>parts of the resource URL</div>
+                <div>for example: <code>{name}</code>, <code>{ext}</code>, <code>{host}</code></div>
+            </li>
+            <li>
+                <div>generic values, such as dates or counters</div>
+                <div>for example: <code>{yyyy}</code>, <code>{ccc}</code></div>
+            </li>
+        </ul>
+
+        For a quick example, suppose a resource has the URL
+        <code>https://www.example.com/aaa/bbb/some_name.pdf</code>.
+        Then:
+        <ul class="compact">
+            <li>the mask <code>{name}.{ext}</code> becomes <code>some_name.pdf</code></li>
+            <li>the mask <code>{yyyy}-{name}.{ext}</code> becomes <code>2026-some_name.pdf</code></li>
+            <li>the mask <code>{host}</code> becomes <code>www.example.com</code></li>
+            <li>the mask <code>{text}</code> becomes the visible link text from the web page</li>
+        </ul>
+
+        More specific details are provided in the following sections of this guide.
+
+    </div>
+
+    <div id="details-5" class="help-popover bottom center light-theme" popover
+        style="position-anchor: --anchor-5;max-width: 325px;">
+        <div><img src="images2/info-popup.png" style="vertical-align: bottom;max-width: 325px;border: 1px solid gray;">
+        </div>
+        <p>This shows the available <em>link attributes</em>, including a <em>thumbnail preview</em> for image items.
+        </p>
+        <p>It
+            also indicates whether the item <em>was downloaded before</em>, including the download date. </p>
+    </div>
+
+    <div id="details-6" class="help-popover bottom left light-theme-2" popover
+        style="position-anchor: --anchor-6;max-width: 280px;">
+        <p class="justify" style="margin-top: 1px;">You can indicate one or more extensions separated by spaces (or
+            commas)</p>
+        <div style="text-align: center;"><img src="images2/extensions-types.png"
+                style="vertical-align: bottom;max-height: 48px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-7" class="help-popover bottom left light-theme-2" popover style="position-anchor: --anchor-7;">
+        <div style="text-align: center;"><img src="images2/text-filter.png"
+                style="vertical-align: bottom;max-height: 48px;border: 1px solid gray;"></div>
+        <p style="max-width: 380px;">
+            When the text filter field is focused, an inline help button <img src="images2/inline-help.png"
+                style="height: 20px;"> appears. Clicking it opens an explanatory popup:
+
+        </p>
+        <div style="text-align: center;"><img src="images2/text-filter-help.png"
+                style="vertical-align: bottom;max-width: 380px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-8" class="help-popover bottom left light-theme" popover style="position-anchor: --anchor-8;">
+        <div style="text-align: center;"><img src="images2/category-filter.png"
+                style="vertical-align: bottom;max-width: 175px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-9" class="help-popover bottom left light-theme" popover style="position-anchor: --anchor-9;">
+        <p style="max-width: 500px; margin-top: 0;">You can create complex filters and save them as custom categories.
+            To do this, go to the extension's general settings using the <img src="images2/settings.png"
+                style="height: 20px;"> button, then open the <strong>Custom Categories</strong> panel.</p>
+        <div style="text-align: center;"><img src="images2/custom-category.png"
+                style="vertical-align: bottom;max-width: 500px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-10" class="help-popover bottom left light-theme-2" popover style="position-anchor: --anchor-10;">
+        <div style="text-align: center;"><img src="images2/set-directory.png"
+                style="vertical-align: bottom;max-height: 100px;border: 1px solid gray;"></div>
+        <p style="max-width: 380px;">
+            When the <strong>directory field</strong> is focused, an inline help button <img
+                src="images2/inline-help.png" style="height: 20px;"> appears. Clicking it opens an explanatory popup:
+
+        </p>
+        <div style="text-align: center;"><img src="images2/set-directory-help.png"
+                style="vertical-align: bottom;max-width: 380px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-11" class="help-popover bottom center light-theme-2" popover style="position-anchor: --anchor-11;">
+        <div style="text-align: center;"><img src="images2/folder-autocomplete.avif"
+                style="vertical-align: bottom;max-width: 100px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-12" class="help-popover bottom left light-theme-2" popover style="position-anchor: --anchor-12;">
+        <p style="max-width: 550px; margin-top: 0;">To create favorite folders, go to the extension’s general settings
+            using the <img src="images2/settings.png" style="height: 20px;"> button and find the <strong>Download
+                directories</strong> section.</p>
+        <div style="text-align: center;"><img src="images2/favorite-folders.png"
+                style="vertical-align: bottom;max-width: 550px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-13" class="help-popover bottom left light-theme-2" popover style="position-anchor: --anchor-13;">
+        <div style="text-align: center;"><img src="images2/name-mask-reslist.png"
+                style="vertical-align: bottom;max-width: 280px;border: 1px solid gray;"></div>
+        <p style="max-width: 500px;">
+            When the <strong>name mask</strong> field is focused, an inline help button <img
+                src="images2/inline-help.png" style="height: 20px;"> appears. Clicking it opens an explanatory popup:
+
+        </p>
+        <div style="text-align: center;"><img src="images2/name-mask-help.png"
+                style="vertical-align: bottom;max-width: 500px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-14" class="help-popover bottom right light-theme" popover style="position-anchor: --anchor-14;">
+        <div style="text-align: center;"><img src="images2/thumbnails-view.avif"
+                style="vertical-align: bottom;max-width: 500px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-15" class="help-popover bottom left light-theme" popover style="position-anchor: --anchor-15;">
+        <div style="text-align: center;"><img src="images2/multirename.png"
+                style="vertical-align: bottom;max-width: 350px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-16" class="help-popover bottom center light-theme" popover style="position-anchor: --anchor-16;">
+        <div style="text-align: center;"><img src="images2/edit-item.png"
+                style="vertical-align: bottom;max-width: 300px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-17" class="help-popover top center light-theme" popover style="position-anchor: --anchor-17;">
+        <div style="text-align: center;"><img src="images2/tabs-dialog.png"
+                style="vertical-align: bottom;max-width: 540px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-18" class="help-popover top right light-theme-2" popover style="position-anchor: --anchor-18;">
+        <div style="text-align: center;"><img src="images2/pattern-url.png"
+                style="vertical-align: bottom;max-width: 400px;border: 1px solid gray;"></div>
+        <p><strong>Comment:</strong> The syntax used for batch descriptors broadly follows the one defined by
+            DownThemAll <a
+                href="https://www.downthemall.org/howto/help/english-menu/batch-downloadsbatch-descriptors/">here</a>.
+        </p>
+    </div>
+
+    <div id="details-19" class="help-popover top right light-theme-2" popover style="position-anchor: --anchor-19;">
+        <p style="max-width: 550px; margin-top: 0;">To configure the mask format, go to the extension’s general settings
+            and find the <strong>Link export format</strong> section.</p>
+        <div style="text-align: center;"><img src="images2/export-format.png"
+                style="vertical-align: bottom;max-width: 500px;border: 1px solid gray;"></div>
+        <p>A click on the <img src="images2/export-help-icon.png" style="height: 20px;"> help button open the following
+            explanatory dialog</p>
+        <div style="text-align: center;"><img src="images2/export-help.png"
+                style="vertical-align: bottom;max-width: 300px;border: 1px solid gray;"></div>
+
+    </div>
+
+    <div id="details-20" class="help-popover top right light-theme-2" popover style="position-anchor: --anchor-20;">
+        <div style="width:275px;" class="justify">Below is the hamburger menu <img src="images2/image-27.png"
+                style="height: 20px;"> for the download list, but the import-export functionality is also included in
+            the hamburger menu for the resources list </div>
+        <div style="text-align: center;"><img src="images2/menu-download-list.png"
+                style="vertical-align: bottom;max-width: 200px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-21" class="help-popover top center light-theme" popover style="position-anchor: --anchor-21;">
+        <div style="text-align: center;"><img src="images2/extra-scan-01.png"
+                style="vertical-align: bottom;max-width: 400px;border: 1px solid gray;"></div>
+    </div>
+
+    <div id="details-22" class="help-popover top center light-theme" popover style="position-anchor: --anchor-22;">
+    </div>
+
+    <div id="details-23" class="help-popover top center light-theme" popover style="position-anchor: --anchor-23;">
+    </div>
+
+    <div id="details-24" class="help-popover top center light-theme" popover style="position-anchor: --anchor-24;">
+    </div>
+
+    <script>
+        (() => {
+            let hoverPopoverId = 0;
+
+            function setupHoverPopover(triggerSelector, popoverSelector, options = {}) {
+                const trigger = document.querySelector(triggerSelector);
+                const popover = document.querySelector(popoverSelector);
+
+                if (!trigger || !popover) return null;
+
+                const openDelay = options.openDelay ?? options.delay ?? 0;
+                const closeDelay = options.closeDelay ?? 120;
+                const defaultAnchor = options.defaultAnchor
+                    ?? popover.style.getPropertyValue("position-anchor");
+                const hoverAnchor = options.anchor
+                    ?? `--help-hover-anchor-${++hoverPopoverId}`;
+                let openTimer = 0;
+                let closeTimer = 0;
+                let openedByHover = false;
+
+                trigger.style.setProperty("anchor-name", hoverAnchor);
+
+                function clearOpenTimer() {
+                    clearTimeout(openTimer);
+                }
+
+                function clearCloseTimer() {
+                    clearTimeout(closeTimer);
+                }
+
+                function clearTimers() {
+                    clearOpenTimer();
+                    clearCloseTimer();
+                }
+
+                function restoreDefaultAnchor() {
+                    if (defaultAnchor) popover.style.setProperty("position-anchor", defaultAnchor);
+                }
+
+                function showNow() {
+                    openedByHover = true;
+                    popover.style.setProperty("position-anchor", hoverAnchor);
+                    if (!popover.matches(":popover-open")) popover.showPopover();
+                }
+
+                function show() {
+                    clearTimers();
+                    if (openDelay > 0) {
+                        openTimer = setTimeout(showNow, openDelay);
+                    } else {
+                        showNow();
+                    }
+                }
+
+                function hideSoon() {
+                    clearOpenTimer();
+                    clearCloseTimer();
+                    closeTimer = setTimeout(() => {
+                        if (!openedByHover) return;
+                        openedByHover = false;
+                        if (popover.matches(":popover-open")) popover.hidePopover();
+                        restoreDefaultAnchor();
+                    }, closeDelay);
+                }
+
+                function reset() {
+                    clearTimers();
+                    openedByHover = false;
+                    restoreDefaultAnchor();
+                }
+
+                trigger.addEventListener("mouseenter", show);
+                trigger.addEventListener("mouseleave", hideSoon);
+                trigger.addEventListener("focus", show);
+                trigger.addEventListener("blur", hideSoon);
+                popover.addEventListener("mouseenter", clearCloseTimer);
+                popover.addEventListener("mouseleave", hideSoon);
+
+                return { show, hideSoon, reset };
+            }
+
+            const detailsHover = setupHoverPopover("#button-details-1b", "#details-1", {
+                anchor: "--folders-anchor-hover",
+                delay: 500
+            });
+
+            document.querySelector("#button-details-1")?.addEventListener("click", () => {
+                detailsHover?.reset();
+            });
+        })();
+
+        (() => {
+            document.querySelectorAll(".accordion").forEach((accordion) => {
+                accordion.addEventListener("toggle", (event) => {
+                    const item = event.target;
+                    if (!(item instanceof HTMLDetailsElement) || !item.open) return;
+
+                    accordion.querySelectorAll(".accordion-item[open]").forEach((otherItem) => {
+                        if (otherItem !== item) otherItem.open = false;
+                    });
+                }, true);
+            });
+        })();
+    </script>
 </body>
 
 </html>
